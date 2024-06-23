@@ -2,9 +2,10 @@
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import { useRef } from "react";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
+import { LtoR, BtoU, RtoL } from "@/app/motion";
+
 const items = [
   {
     id: 1,
@@ -34,77 +35,6 @@ const items = [
 
 const Homepage = () => {
 
-  const variantsBtoUp = {
-    offscreen: {
-      y: 100,
-      opacity: 0,
-    },
-    onscreen: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1.3,
-        delay: 0.4,
-      },
-    },
-  };
-
-  const variantsUptoB = {
-    offscreen: {
-      y: -100,
-      opacity: 0,
-    },
-    onscreen: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1.3,
-        delay: 0.4,
-      },
-    },
-  };
-
-  const variantsRtoL = {
-    offscreen: {
-      x: [-50, 0],
-      opacity: 0,
-    },
-    onscreen: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 1.3,
-        delay: 0.4,
-      },
-    },
-  };
-
-  const variantsUptoBtoEach = {
-    offscreen: {
-      y: 100,
-      opacity: 0,
-    },
-    onscreen: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.8,
-        duration: 1.3,
-        delay: 0.4,
-      },
-    },
-  };
-
-  const aboutRef = useRef()
-  const isAboutRefInView = useInView(aboutRef, { margin: "-200px" })
-
-  const workRef = useRef()
-  const isWorkRefInView = useInView(workRef, { margin: "-200px" })
-
-  const contactRef = useRef()
-  const isContactRefInView = useInView(contactRef, { margin: "-200px" })
-
   return (
     <div>
       {/* Hero */}
@@ -120,143 +50,118 @@ const Homepage = () => {
           className="w-auto max-w-full mx-auto"
         />
 
-        <div className="flex flex-col justify-center items-center text-center">
+        <div className="flex flex-col text-center">
           <h1 className="text-5xl px-5 font-bold leading-tight container mx-auto">
             あなたの生活を<span className="text-yellow-500">明るく照らす💡</span>
             <br />安心の
             <span className="text-yellow-500">電気工事</span>
           </h1>
-          {/* <p className="text-lg text-gray-300 my-4">
-            Discover amazing features and services that await you.
-          </p> */}
+
           <Link href="/contact" className="my-[60px]">
-            <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 
-            overflow-hidden text-md font-bold text-gray-900 rounded-full group 
-            bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200
-            group-hover:from-yellow-200 group-hover:via-red-200 group-hover:to-blue-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-yellow-100 dark:focus:ring-yellow-400">
-              <span className="relative px-5 py-2.5 transition-all ease-in duration-200 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0 hover:text-white">
+            <button className="relative inline-flex justify-center 
+            p-0.5 mb-2 me-2 text-md font-bold rounded-full text-gray-700 group 
+            bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200">
+              <span className="relative px-5 py-2.5 transition-all ease-in duration-200 bg-white rounded-full group-hover:bg-opacity-0 hover:text-white">
                 <FiPhoneCall className="text-xl inline mr-3" />
                 CONTACT US
               </span>
             </button>
           </Link>
         </div>
+        <motion.svg
+          initial={{ opacity: 0.2, y: 0 }}
+          animate={{ opacity: 1, y: "10px" }}
+          transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          width={50}
+          height={50}
+          className="mt-[40px] mx-auto"
+        >
+          <path
+            d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
+            stroke="#000000"
+            strokeWidth="1"
+          ></path>
+          <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
+          <path
+            d="M15 11L12 14L9 11"
+            stroke="#000000"
+            strokeWidth="1"
+          ></path>
+        </motion.svg>
       </motion.div>
       <div className="my-[120px]"></div>
 
       {/* about */}
-      <section className="" >
-        <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-            <motion.div
-              variants={{
-                offscreen: { // 画面外の場合のスタイル
-                  y: 100,
-                  opacity: 0,
-                },
-                onscreen: { // 画面内の場合のスタイル
-                  y: 0,
-                  opacity: 1,
-                  transition: {
-                    duration: 1,
-                  },
-                },
-              }}
-              initial="offscreen" // 初期表示はoffscreen
-              whileInView="onscreen" // 画面内に入ったらonscreen
-              viewport={{ once: false, amount: 0 }}
-              // initial={{ opacity: 0 }}
-              // animate={isAboutRefInView ? { opacity: 1, x: [-100, 0] } : {}}
-              // whileInView="visible"
-              // viewport={{ once: true }}
-              // animate={{ opacity: 1, x: [-100, 0] }}
-              // transition={{ duration: 1.5, ease: "easeOut" }}
-
-              className="max-w-lg"
-            >
-              <h2 className="text-3xl font-extrabold text-yellow-500 sm:text-4xl overline tracking-wide">
-                ABOUT US
-              </h2>
-              <p className="text-yellow-500 tracking-wide">-業務内容-</p>
-              <p className="mt-4 text-gray-600 text-lg">
-                ・私たちは、お客様の安心と満足を最優先に考えた電気工事サービスを提供します。<br />
-                ・経験豊富なスタッフが最新の技術を駆使し、高品質な施工をお約束します。<br />
-                ・小さな修理から大規模な電気工事まで、多岐にわたるサービスを展開しており、
-                常にお客様のニーズに応えることを目指しています。
-              </p>
-              <div className="mt-8">
-                <a href="#" className="text-blue-500 hover:text-blue-600 font-medium">
-                  see more
-                  <span className="ml-2">&#8594;</span></a>
-              </div>
-            </motion.div>
-            <motion.div
-              variants={{
-                offscreen: { // 画面外の場合のスタイル
-                  y: 50,
-                  opacity: 0,
-                },
-                onscreen: { // 画面内の場合のスタイル
-                  y: 0,
-                  opacity: 1,
-                  transition: {
-                    duration: 1.5,
-                  },
-                },
-              }}
-              initial="offscreen" // 初期表示はoffscreen
-              whileInView="onscreen" // 画面内に入ったらonscreen
-              viewport={{ once: false, amount: 0 }}
-              // initial={{ opacity: 0 }}
-              // animate={isAboutRefInView ? { opacity: 1, x: [100, 0] } : {}}
-              // animate={{ opacity: 1, x: [100, 0] }}
-              // transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-              // viewport={{ once: false }}
-              className="mt-12 md:mt-0 mx-auto max-w-96"
-            >
-              <Image height={400} width={400}
-                src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
-                alt="About Us Image"
-                className="object-cover rounded-lg shadow-md w-full" />
-            </motion.div>
-          </div>
+      <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+          <motion.div
+            initial={LtoR().offscreen}
+            whileInView={LtoR().onscreen}
+            viewport={{ once: false, amount: 0 }}
+            className="max-w-lg"
+          >
+            <h2 className="text-center md:text-left font-extrabold text-yellow-500 text-4xl overline tracking-wide">
+              ABOUT US
+            </h2>
+            <p className="text-center md:text-left text-yellow-500 tracking-wide">-業務内容-</p>
+            <ul className="list-disc pl-4 mt-8 text-gray-600">
+              <li className="my-4">私たちは、お客様の安心と満足を最優先に考えた電気工事サービスを提供します。</li>
+              <li className="my-4">経験豊富なスタッフが最新の技術を駆使し、高品質な施工をお約束します。</li>
+              <li className="my-4">小さな修理から大規模な電気工事まで、多岐にわたるサービスを展開しており、
+                常にお客様のニーズに応えることを目指しています。</li>
+            </ul>
+            <div className="mt-8">
+              <Link href="/contact" className="mb-[60px] flex justify-end">
+                <button className="flex justify-end 
+            p-0.5 mb-2 me-2 text-md font-bold rounded-full text-gray-700 group 
+            bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200">
+                  <span className=" px-5 py-2.5 transition-all ease-in duration-200 bg-white rounded-full group-hover:bg-opacity-0 hover:text-white">
+                    {/* <FiPhoneCall className="text-xl inline mr-3" /> */}
+                    もっと見る
+                  </span>
+                </button>
+              </Link>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={BtoU().offscreen}
+            whileInView={BtoU().onscreen}
+            viewport={{ once: false, amount: 0 }}
+            className="mt-12 md:mt-0 mx-auto max-w-96 shadow-2xl shadow-yellow-100"
+          >
+            <Image height={400} width={400}
+              src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
+              alt="About Us Image"
+              className="object-cover rounded-lg shadow-md w-full"
+            />
+          </motion.div>
         </div>
-      </section >
+      </div>
 
       <div className="my-[120px]"></div>
+
       {/* work */}
-      <section className="py-16 h-full" ref={workRef}>
+      <section className="py-16 h-full">
         <motion.div
-          variants={{
-            offscreen: { // 画面外の場合のスタイル
-              y: 100,
-              opacity: 0,
-            },
-            onscreen: { // 画面内の場合のスタイル
-              y: 0,
-              opacity: 1,
-              transition: {
-                duration: 0.5,
-              },
-            },
-          }}
-          initial="offscreen" // 初期表示はoffscreen
-          whileInView="onscreen" // 画面内に入ったらonscreen
+          initial={LtoR().offscreen}
+          whileInView={LtoR().onscreen}
           viewport={{ once: false, amount: 0 }}
           className="my-5">
-          <h2 className="text-3xl text-center font-extrabold text-yellow-500 sm:text-4xl overline tracking-wide">
+          <h2 className="text-center font-extrabold text-yellow-500 text-4xl overline tracking-wide">
             SERVICE
           </h2>
           <p className="text-center text-yellow-500 tracking-wide">-事業内容-</p>
         </motion.div>
 
-        {/*  */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 px-3 py-3 mt-[100px]">
           {/* first */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={isWorkRefInView ? { opacity: 1, y: [80, 0] } : {}}
-            transition={{ duration: 1.3, ease: "easeOut", delay: 0.3 }}
+            initial={BtoU().offscreen}
+            whileInView={BtoU().onscreen}
+            viewport={{ once: false, amount: 0 }}
             className="relative p-1 bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200 max-w-sm overflow-hidden bg-cover bg-no-repeat shadow-lg mx-auto rounded">
             <Image height={300} width={300}
               src="https://images.unsplash.com/photo-1636218685495-8f6545aadb71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RWxlY3RyaWNhbCUyMHdvcmtlcnxlbnwwfHwwfHx8MA%3D%3D"
@@ -265,7 +170,7 @@ const Homepage = () => {
             />
             <div className="px-6 py-4 bg-white rounded-b">
               <div className="font-bold text-xl mb-2">電線の修理保全</div>
-              <p className="text-gray-700 text-base">
+              <p className="text-gray-600 text-base">
                 私たちの生活に欠かせない「電気」と言うエネルギーのインフラを支えます。
               </p>
               <Link href="/" className="grid justify-items-end">もっと見る</Link>
@@ -274,9 +179,9 @@ const Homepage = () => {
 
           {/* second */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={isWorkRefInView ? { opacity: 1, y: [80, 0] } : {}}
-            transition={{ duration: 1.3, ease: "easeOut", delay: 0.6 }}
+            initial={BtoU().offscreen}
+            whileInView={BtoU(0.2).onscreen}
+            viewport={{ once: false, amount: 0 }}
             className="relative p-1 bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200 max-w-sm overflow-hidden bg-cover bg-no-repeat shadow-lg mx-auto rounded">
             <Image height={300} width={300}
               src="https://images.unsplash.com/photo-1636218685495-8f6545aadb71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RWxlY3RyaWNhbCUyMHdvcmtlcnxlbnwwfHwwfHx8MA%3D%3D"
@@ -285,7 +190,7 @@ const Homepage = () => {
             />
             <div className="px-6 py-4 bg-white rounded-b">
               <div className="font-bold text-xl mb-2">電線の修理保全</div>
-              <p className="text-gray-700 text-base">
+              <p className="text-gray-600 text-base">
                 私たちの生活に欠かせない「電気」と言うエネルギーのインフラを支えます。
               </p>
               <Link href="/" className="grid justify-items-end">もっと見る</Link>
@@ -294,9 +199,9 @@ const Homepage = () => {
 
           {/* third */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={isWorkRefInView ? { opacity: 1, y: [80, 0] } : {}}
-            transition={{ duration: 1.3, ease: "easeOut", delay: 0.9 }}
+            initial={BtoU().offscreen}
+            whileInView={BtoU(0.4).onscreen}
+            viewport={{ once: false, amount: 0 }}
             className="relative p-1 bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200 max-w-sm overflow-hidden bg-cover bg-no-repeat shadow-lg mx-auto rounded">
             <Image height={300} width={300}
               src="https://images.unsplash.com/photo-1636218685495-8f6545aadb71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RWxlY3RyaWNhbCUyMHdvcmtlcnxlbnwwfHwwfHx8MA%3D%3D"
@@ -305,7 +210,7 @@ const Homepage = () => {
             />
             <div className="px-6 py-4 bg-white rounded-b">
               <div className="font-bold text-xl mb-2">電線の修理保全</div>
-              <p className="text-gray-700 text-base">
+              <p className="text-gray-600 text-base">
                 私たちの生活に欠かせない「電気」と言うエネルギーのインフラを支えます。
               </p>
               <Link href="/" className="grid justify-items-end">もっと見る</Link>
@@ -313,18 +218,27 @@ const Homepage = () => {
           </motion.div>
         </div>
       </section>
+
       <div className="my-[120px]"></div>
 
       {/* contact */}
       <section className="py-16 h-full container max-w-lg mx-auto">
-        <div className="my-5">
-          <h2 className="text-3xl text-center font-extrabold text-yellow-500 sm:text-4xl overline tracking-wide">
+        <motion.div
+          initial={LtoR().offscreen}
+          whileInView={LtoR().onscreen}
+          viewport={{ once: false, amount: 0 }}
+          className="my-5">
+          <h2 className="text-center font-extrabold text-yellow-500 text-4xl overline tracking-wide">
             CONTACT
           </h2>
           <p className="text-center text-yellow-500 tracking-wide">-お問い合わせ-</p>
-        </div>
-        <div className="p-5 text-center">
-          <p className="p-5 ">
+        </motion.div>
+        <motion.div
+          initial={LtoR().offscreen}
+          whileInView={LtoR(0.5).onscreen}
+          viewport={{ once: false, amount: 0 }}
+          className="p-5 text-center">
+          <p className="p-5 text-gray-600">
             私たちのサービスにご関心をお寄せいただきありがとうございます。<br />
             電気工事に関するご質問やお見積もりのご依頼、ご相談など、どのようなことでもお気軽にお問い合わせください。<br />
             専門のスタッフが迅速に対応させていただきます。
@@ -333,8 +247,8 @@ const Homepage = () => {
             href="tel:000-1234-5678">
             <FiPhoneCall />000-1234-5678
           </a>
-          <p className="py-2">受付時間／9:00-18:00 (土日祝除く)</p>
-        </div>
+          <p className="py-2 text-gray-600">受付時間 / 9:00-18:00 (土日祝除く)</p>
+        </motion.div>
 
         <motion.svg
           initial={{ opacity: 0.2, y: 0 }}
@@ -359,15 +273,20 @@ const Homepage = () => {
             strokeWidth="1"
           ></path>
         </motion.svg>
-        <div className="p-5 mt-4 text-center">
+        <motion.div
+          initial={BtoU().offscreen}
+          whileInView={BtoU().onscreen}
+          viewport={{ once: false, amount: 0 }}
+          className="p-5 mt-4 text-center">
           <MdOutlineMail className="mx-auto text-5xl mb-[20px]" />
           <Link href="/" className="py-2">
-            <button class="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden text-md font-bold text-gray-900 rounded-lg group transition duration-100 bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white">
-              <span class="relative px-9 py-4 transition-all ease-in duration-100 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            <button class="inline-flex p-0.5 mb-2 text-md font-bold text-gray-700 rounded-lg group transition duration-100 bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white">
+              <span class="px-9 py-4 transition-all ease-in duration-100 bg-white rounded-md group-hover:bg-opacity-0">
                 メールでお問い合わせ
               </span>
-            </button></Link>
-        </div>
+            </button>
+          </Link>
+        </motion.div>
       </section >
 
 
