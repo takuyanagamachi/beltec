@@ -2,6 +2,7 @@
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { LtoR, BtoU, RtoL } from "@/app/motion";
+import Contact from "@/components/contact";
 
 const InfoPage = () => {
 
@@ -71,7 +72,7 @@ const InfoPage = () => {
               代表者
             </li>
             <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              1994年6月
+              前場 恵介
             </li>
             <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
               従業員数
@@ -375,7 +376,7 @@ const InfoPage = () => {
           </div>
         </div>
       </div>
-
+      <Contact />
     </div >
   );
 };

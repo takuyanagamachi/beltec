@@ -1,8 +1,17 @@
 "use client"
-import { motion, useScroll, useTransform } from "framer-motion";
+import Contact from "@/components/contact";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { BtoU, LtoR } from "../motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+
 
 const items = [
   {
@@ -41,11 +50,155 @@ const items = [
 
 const PortfolioPage = () => {
 
-  const ref = useRef()
-  const { scrollYProgress } = useScroll({ target: ref })
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"])
   return (
-    <motion.div
+    <div>
+      {/* hero  */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [-50, 0] }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        className="h-96 relative bg-gradient-to-r from-purple-600 to-blue-600 text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <Image height={300} width={300}
+            src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGNvbXBhbnl8ZW58MHx8MHx8fDA%3D"
+            alt="Background Image"
+            className="object-cover object-center w-full h-96"
+          />
+          <div className="absolute inset-0 "></div>
+        </div>
+        <div className="relative h-full z-10 flex flex-col justify-center items-center">
+          <h1 className="p-2 bg-black bg-opacity-50 rounded-md sm:text-5xl text-4xl font-bold leading-tight mb-4">
+            事業内容
+          </h1>
+        </div>
+      </motion.div>
+
+
+
+
+
+
+      {/* COMPANY */}
+      <div className="container mx-auto">
+        <div className="grid grid-col md:p-12 lg:p-20 xl:p-36">
+          <motion.div
+            initial={LtoR().offscreen}
+            whileInView={LtoR().onscreen}
+            viewport={{ once: false, amount: 0 }}
+            className="my-16 text-center">
+            <h2 className="font-extrabold text-yellow-500 text-4xl overline tracking-wide">
+              WORK
+            </h2>
+            <p className="text-yellow-500 tracking-wide">-事業内容-</p>
+          </motion.div>
+
+          <motion.div
+            initial={LtoR().offscreen}
+            whileInView={LtoR().onscreen}
+            viewport={{ once: false, amount: 0 }}
+            className="list-none grid grid-cols-2 backgroundKibanImage min-h-[1600px] container mx-auto"
+          >
+            <li className=" w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              創業
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              1994年6月
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              設立
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              1997年12月
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              資本金
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              35,000千円
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              代表者
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              1994年6月
+            </li>
+
+          </motion.div>
+
+          <div className="clear-both my-[120px]"></div>
+
+          <div className="flex flex-col gap-12 rounded p-[30px] bg-gray-50">
+
+            <motion.div
+              initial={BtoU().offscreen}
+              whileInView={BtoU().onscreen}
+              viewport={{ once: false, amount: 0 }}
+              className="my-16">
+              <h2 className="text-center font-extrabold text-yellow-500 text-4xl overline tracking-wide">
+                History
+              </h2>
+              <p className="text-center text-yellow-500 tracking-wide">-沿革-</p>
+            </motion.div>
+
+            <motion.div
+              initial={LtoR().offscreen}
+              whileInView={LtoR().onscreen}
+              viewport={{ once: false, amount: 0 }}
+              className=""
+            >
+
+              {/* LEFT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg">
+                    1994年6月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md">
+                    株式会社ベルテック前身にあたるテクノサービス設立、家電事業開始
+                  </div>
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3"></div>
+              </div>
+
+
+              {/* RIGHT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg">
+                    1996年10月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md">
+                    電気設備事業、空調設備事業、アンテナ設備事業、弱電・通信事業開始
+                  </div>
+                </div>
+              </div>
+
+
+
+            </motion.div>
+          </div>
+        </div>
+      </div>
+      <Contact />
+    </div >
+  )
+}
+
+export default PortfolioPage
+
+{/* <motion.div
       className="h-full"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
@@ -108,8 +261,4 @@ const PortfolioPage = () => {
           </Link>
         </div>
       </div>
-    </motion.div>
-  )
-}
-
-export default PortfolioPage
+    </motion.div> */}

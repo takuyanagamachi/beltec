@@ -20,6 +20,10 @@
   /* background-repeat: no-repeat; */
 }
 
-.backgroundColor {
-  /* background-color: rgba(0, 0, 0, 0.5); */
+.backgroundKibanImage {
+  background-image: url('/bg-kiban.jpg');
+  /* background-size: cover; */
+  background-position: center;
+  opacity: 50;
+  /* background-repeat: no-repeat; */
 }
