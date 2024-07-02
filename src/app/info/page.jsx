@@ -38,10 +38,10 @@ const InfoPage = () => {
             whileInView={LtoR().onscreen}
             viewport={{ once: false, amount: 0 }}
             className="my-16 text-center">
-            <h2 className="font-extrabold text-yellow-500 text-4xl overline tracking-wide">
+            <h2 className="font-extrabold text-yellow-500 text-5xl overline tracking-wide">
               COMPANY
             </h2>
-            <p className="text-yellow-500 tracking-wide">-会社概要-</p>
+            <p className="text-yellow-500 tracking-wide text-xl">-会社概要-</p>
           </motion.div>
 
           <motion.div
@@ -172,10 +172,10 @@ const InfoPage = () => {
               whileInView={BtoU().onscreen}
               viewport={{ once: false, amount: 0 }}
               className="my-16">
-              <h2 className="text-center font-extrabold text-yellow-500 text-4xl overline tracking-wide">
+              <h2 className="text-center font-extrabold text-yellow-500 text-5xl overline tracking-wide">
                 History
               </h2>
-              <p className="text-center text-yellow-500 tracking-wide">-沿革-</p>
+              <p className="text-center text-yellow-500 tracking-wide text-xl">-沿革-</p>
             </motion.div>
 
             <motion.div
@@ -188,10 +188,10 @@ const InfoPage = () => {
               {/* LEFT*/}
               <div className="flex justify-between h-28">
                 <div className="w-1/3">
-                  <div className="p-1 font-semibold text-lg">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
                     1994年6月
                   </div>
-                  <div className="text-gray-600 p-1 text-md">
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
                     株式会社ベルテック前身にあたるテクノサービス設立、家電事業開始
                   </div>
                 </div>
@@ -214,10 +214,10 @@ const InfoPage = () => {
                   </div>
                 </div>
                 <div className="w-1/3">
-                  <div className="p-1 font-semibold text-lg">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
                     1996年10月
                   </div>
-                  <div className="text-gray-600 p-1 text-md">
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
                     電気設備事業、空調設備事業、アンテナ設備事業、弱電・通信事業開始
                   </div>
                 </div>
@@ -226,10 +226,10 @@ const InfoPage = () => {
               {/* LEFT*/}
               <div className="flex justify-between h-28">
                 <div className="w-1/3">
-                  <div className="p-1 font-semibold text-lg">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
                     1997年12月
                   </div>
-                  <div className="text-gray-600 p-1 text-md">
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
                     資本金3,000千円にて、有限会社ベルテック設立
                   </div>
                 </div>
@@ -251,10 +251,10 @@ const InfoPage = () => {
                   </div>
                 </div>
                 <div className="w-1/3">
-                  <div className="p-1 font-semibold text-lg">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
                     2002年1月
                   </div>
-                  <div className="text-gray-600 p-1 text-md">
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
                     資本金10,000千円に増資
                   </div>
                 </div>
@@ -263,10 +263,10 @@ const InfoPage = () => {
               {/* LEFT*/}
               <div className="flex justify-between h-28">
                 <div className="w-1/3">
-                  <div className="p-1 font-semibold text-lg">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
                     2006年8月
                   </div>
-                  <div className="text-gray-600 p-1 text-md">
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
                     株式会社ベルテックに組織変更
                   </div>
                 </div>
@@ -288,10 +288,10 @@ const InfoPage = () => {
                   </div>
                 </div>
                 <div className="w-1/3">
-                  <div className="p-1 font-semibold text-lg">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
                     2010年9月
                   </div>
-                  <div className="text-gray-600 p-1 text-md">
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
                     給排水設備事業開始<br />
                     太陽光事業開始
                   </div>
@@ -301,10 +301,10 @@ const InfoPage = () => {
               {/* LEFT*/}
               <div className="flex justify-between h-28">
                 <div className="w-1/3">
-                  <div className="p-1 font-semibold text-lg">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
                     2013年1月
                   </div>
-                  <div className="text-gray-600 p-1 text-md">
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
                     資本金17,000千円に増資
                   </div>
                 </div>
@@ -326,10 +326,10 @@ const InfoPage = () => {
                   </div>
                 </div>
                 <div className="w-1/3">
-                  <div className="p-1 font-semibold text-lg">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
                     2014年2月
                   </div>
-                  <div className="text-gray-600 p-1 text-md">
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
                     資本金25,000千円に増資
                   </div>
                 </div>
@@ -338,10 +338,10 @@ const InfoPage = () => {
               {/* LEFT*/}
               <div className="flex justify-between h-28">
                 <div className="w-1/3">
-                  <div className="p-1 font-semibold text-lg">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
                     2014年4月
                   </div>
-                  <div className="text-gray-600 p-1 text-md">
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
                     四国営業所開設
                   </div>
                 </div>
@@ -363,10 +363,10 @@ const InfoPage = () => {
                   </div>
                 </div>
                 <div className="w-1/3">
-                  <div className="p-1 font-semibold text-lg">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
                     2015年2月
                   </div>
-                  <div className="text-gray-600 p-1 text-md">
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
                     資本金35,000千円に増資
                   </div>
                 </div>

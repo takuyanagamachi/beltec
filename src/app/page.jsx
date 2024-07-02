@@ -39,7 +39,7 @@ const items = [
 const Homepage = () => {
 
   return (
-    <div>
+    <div className="">
       <ToastContainer position="top-center" />
 
       {/* Hero */}
@@ -56,7 +56,7 @@ const Homepage = () => {
         />
 
         <div className="flex flex-col text-center">
-          <h1 className="text-5xl px-5 font-bold leading-tight container mx-auto">
+          <h1 className="text-4xl md:text-6xl px-5 font-bold leading-tight container mx-auto">
             あなたの生活を<span className="text-yellow-500">明るく照らす💡</span>
             <br />安心の
             <span className="text-yellow-500">電気工事</span>
@@ -108,18 +108,18 @@ const Homepage = () => {
             viewport={{ once: false, amount: 0 }}
             className="max-w-lg"
           >
-            <h2 className="text-center md:text-left font-extrabold text-yellow-500 text-4xl overline tracking-wide">
+            <h2 className="text-center md:text-left font-extrabold text-yellow-500 text-5xl overline tracking-wide">
               ABOUT US
             </h2>
-            <p className="text-center md:text-left text-yellow-500 tracking-wide">-業務内容-</p>
-            <ul className="list-disc pl-4 mt-8 text-gray-600">
+            <p className="mb-11 text-center md:text-left text-xl text-yellow-500 tracking-wide">-ベルテックについて-</p>
+            <ul className="pl-4 mt-8 text-gray-600 text-md lg:text-xl">
               <li className="my-4">私たちは、お客様の安心と満足を最優先に考えた電気工事サービスを提供します。</li>
               <li className="my-4">経験豊富なスタッフが最新の技術を駆使し、高品質な施工をお約束します。</li>
               <li className="my-4">小さな修理から大規模な電気工事まで、多岐にわたるサービスを展開しており、
                 常にお客様のニーズに応えることを目指しています。</li>
             </ul>
             <div className="mt-8">
-              <Link href="/contact" className="mb-[60px] flex justify-end">
+              <Link href="/info" className="mb-[60px] flex justify-end">
                 <button className="flex justify-end 
             p-0.5 mb-2 me-2 text-md font-bold rounded-full text-gray-700 group 
             bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200">
@@ -135,7 +135,7 @@ const Homepage = () => {
             initial={BtoU().offscreen}
             whileInView={BtoU().onscreen}
             viewport={{ once: false, amount: 0 }}
-            className="mt-12 md:mt-0 mx-auto max-w-96 shadow-2xl shadow-yellow-100"
+            className="mt-10 md:mt-0 mx-auto max-w-96 shadow-2xl shadow-yellow-100"
           >
             <Image height={400} width={400}
               src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
@@ -155,10 +155,10 @@ const Homepage = () => {
           whileInView={LtoR().onscreen}
           viewport={{ once: false, amount: 0 }}
           className="my-5">
-          <h2 className="text-center font-extrabold text-yellow-500 text-4xl overline tracking-wide">
+          <h2 className="text-center font-extrabold text-yellow-500 text-5xl overline tracking-wide">
             SERVICE
           </h2>
-          <p className="text-center text-yellow-500 tracking-wide">-事業内容-</p>
+          <p className="text-center text-yellow-500 tracking-wide text-xl">-事業内容-</p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 px-3 py-3 mt-[100px]">

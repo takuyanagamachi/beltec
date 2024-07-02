@@ -51,7 +51,7 @@ const items = [
 const PortfolioPage = () => {
 
   return (
-    <div>
+    <div className="">
       {/* hero  */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -74,56 +74,89 @@ const PortfolioPage = () => {
       </motion.div>
 
 
-
-
-
-
       {/* COMPANY */}
       <div className="container mx-auto">
-        <div className="grid grid-col md:p-12 lg:p-20 xl:p-36">
+        <div className="grid grid-col md:p-8 lg:p-20 xl:p-36">
           <motion.div
             initial={LtoR().offscreen}
             whileInView={LtoR().onscreen}
             viewport={{ once: false, amount: 0 }}
             className="my-16 text-center">
-            <h2 className="font-extrabold text-yellow-500 text-4xl overline tracking-wide">
+            <h2 className="font-extrabold text-yellow-500 text-5xl overline tracking-wide">
               WORK
             </h2>
-            <p className="text-yellow-500 tracking-wide">-事業内容-</p>
+            <p className="text-yellow-500 tracking-wide text-xl">-事業内容-</p>
           </motion.div>
 
-          <motion.div
-            initial={LtoR().offscreen}
-            whileInView={LtoR().onscreen}
-            viewport={{ once: false, amount: 0 }}
-            className="list-none grid grid-cols-2 backgroundKibanImage min-h-[1600px] container mx-auto"
-          >
-            <li className=" w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
-              創業
-            </li>
-            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              1994年6月
-            </li>
-            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
-              設立
-            </li>
-            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              1997年12月
-            </li>
-            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
-              資本金
-            </li>
-            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              35,000千円
-            </li>
-            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
-              代表者
-            </li>
-            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              1994年6月
-            </li>
+          <div className="container mx-auto py-16 px-4 sm:px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+              <motion.div
+                initial={LtoR().offscreen}
+                whileInView={LtoR().onscreen}
+                viewport={{ once: false, amount: 0 }}
+                className="max-w-lg mx-auto"
+              >
+                <h2 className="text-center md:text-left font-extrabold text-yellow-500 text-2xl lg:text-4xl tracking-wide mb-8">
+                  電気の安全、<br />私たちが守ります。
+                </h2>
+                <p className="mt-5 text-gray-600 text-md lg:text-xl">
+                  私たちは、お客様の安心と満足を最優先に考えた電気工事サービスを提供します。
+                  経験豊富なスタッフが最新の技術を駆使し、高品質な施工をお約束します。
+                  小さな修理から大規模な電気工事まで
+                </p>
+                <div className="mt-8">
 
-          </motion.div>
+                </div>
+              </motion.div>
+              <motion.div
+                initial={BtoU().offscreen}
+                whileInView={BtoU().onscreen}
+                viewport={{ once: false, amount: 0 }}
+                className="mt-10 md:mt-0 mx-auto max-w-96 shadow-2xl shadow-yellow-100"
+              >
+                <Image height={400} width={400}
+                  src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
+                  alt="About Us Image"
+                  className="object-cover rounded-lg shadow-md w-full"
+                />
+              </motion.div>
+            </div>
+          </div>
+
+          <div className="container mx-auto py-16 px-4 sm:px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+              <motion.div
+                initial={BtoU().offscreen}
+                whileInView={BtoU().onscreen}
+                viewport={{ once: false, amount: 0 }}
+                className="mt-10 md:mt-0 mx-auto max-w-96 shadow-2xl shadow-yellow-100"
+              >
+                <Image height={400} width={400}
+                  src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
+                  alt="About Us Image"
+                  className="object-cover rounded-lg shadow-md w-full"
+                />
+              </motion.div>
+              <motion.div
+                initial={LtoR().offscreen}
+                whileInView={LtoR().onscreen}
+                viewport={{ once: false, amount: 0 }}
+                className="max-w-lg mx-auto"
+              >
+                <h2 className="text-center md:text-right font-extrabold text-yellow-500 text-2xl lg:text-4xl tracking-wide mb-8">
+                  電気の安全、<br />私たちが守ります。
+                </h2>
+                <p className="mt-5 text-gray-600 text-md lg:text-xl">
+                  私たちは、お客様の安心と満足を最優先に考えた電気工事サービスを提供します。
+                  経験豊富なスタッフが最新の技術を駆使し、高品質な施工をお約束します。
+                  小さな修理から大規模な電気工事まで
+                </p>
+                <div className="mt-8">
+
+                </div>
+              </motion.div>
+            </div>
+          </div>
 
           <div className="clear-both my-[120px]"></div>
 
@@ -134,10 +167,10 @@ const PortfolioPage = () => {
               whileInView={BtoU().onscreen}
               viewport={{ once: false, amount: 0 }}
               className="my-16">
-              <h2 className="text-center font-extrabold text-yellow-500 text-4xl overline tracking-wide">
+              <h2 className="text-center font-extrabold text-yellow-500 text-5xl overline tracking-wide">
                 History
               </h2>
-              <p className="text-center text-yellow-500 tracking-wide">-沿革-</p>
+              <p className="text-center text-yellow-500 tracking-wide text-xl">-沿革-</p>
             </motion.div>
 
             <motion.div
@@ -147,43 +180,10 @@ const PortfolioPage = () => {
               className=""
             >
 
-              {/* LEFT*/}
-              <div className="flex justify-between h-28">
-                <div className="w-1/3">
-                  <div className="p-1 font-semibold text-lg">
-                    1994年6月
-                  </div>
-                  <div className="text-gray-600 p-1 text-md">
-                    株式会社ベルテック前身にあたるテクノサービス設立、家電事業開始
-                  </div>
-                </div>
-                <div className="w-1/6 grid justify-center">
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
-                  </div>
-                </div>
-                <div className="w-1/3"></div>
-              </div>
 
 
-              {/* RIGHT*/}
-              <div className="flex justify-between h-28">
-                <div className="w-1/3">
-                </div>
-                <div className="w-1/6 grid justify-center">
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
-                  </div>
-                </div>
-                <div className="w-1/3">
-                  <div className="p-1 font-semibold text-lg">
-                    1996年10月
-                  </div>
-                  <div className="text-gray-600 p-1 text-md">
-                    電気設備事業、空調設備事業、アンテナ設備事業、弱電・通信事業開始
-                  </div>
-                </div>
-              </div>
+
+
 
 
 

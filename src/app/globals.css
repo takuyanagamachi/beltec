@@ -27,3 +27,9 @@
   opacity: 50;
   /* background-repeat: no-repeat; */
 }
+
+.backgroundImageaa {
+  background-image: url('/bg-white.jpg');
+  background-position: center;
+  background-size: cover;
+}

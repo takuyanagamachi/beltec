@@ -14,26 +14,26 @@ const Contact = () => {
         whileInView={LtoR().onscreen}
         viewport={{ once: false, amount: 0 }}
         className="my-5">
-        <h2 className="text-center font-extrabold text-yellow-500 text-4xl overline tracking-wide">
+        <h2 className="text-center font-extrabold text-yellow-500 text-5xl overline tracking-wide">
           CONTACT
         </h2>
-        <p className="text-center text-yellow-500 tracking-wide">-お問い合わせ-</p>
+        <p className="text-center text-yellow-500 tracking-wide text-xl">-お問い合わせ-</p>
       </motion.div>
       <motion.div
         initial={LtoR().offscreen}
         whileInView={LtoR(0.5).onscreen}
         viewport={{ once: false, amount: 0 }}
         className="p-5 text-center">
-        <p className="p-5 text-gray-600">
-          私たちのサービスにご関心をお寄せいただきありがとうございます。<br />
-          電気工事に関するご質問やお見積もりのご依頼、ご相談など、どのようなことでもお気軽にお問い合わせください。<br />
+        <p className="p-5 text-gray-600 text-lg lg:text-xl">
+          私たちのサービスにご関心をお寄せいただき<br />ありがとうございます。
+          <br />電気工事に関するご質問やお見積もりのご依頼、ご相談など、どのようなことでもお気軽にお問い合わせください。<br />
           専門のスタッフが迅速に対応させていただきます。
         </p>
-        <a className="flex gap-3 items-center justify-center font-extrabold text-2xl"
-          href="tel:000-1234-5678">
-          <FiPhoneCall />000-1234-5678
+        <a className="flex gap-3 items-center justify-center font-extrabold text-3xl"
+          href="tel:086-264-8888">
+          <FiPhoneCall />086-264-8888
         </a>
-        <p className="py-2 text-gray-600">受付時間 / 9:00-18:00 (土日祝除く)</p>
+        <p className="py-2 text-gray-600 text-lg lg:text-xl">受付時間 / 8:00~17:00 (土日祝除く)</p>
       </motion.div>
 
       <motion.svg
@@ -65,7 +65,7 @@ const Contact = () => {
         viewport={{ once: false, amount: 0 }}
         className="p-5 mt-4 text-center">
         <MdOutlineMail className="mx-auto text-5xl mb-[20px]" />
-        <Link href="/" className="py-2">
+        <Link href="/contact" className="py-2">
           <button class="inline-flex p-0.5 mb-2 text-md font-bold text-gray-700 rounded-lg group transition duration-100 bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white">
             <span class="px-9 py-4 transition-all ease-in duration-100 bg-white rounded-md group-hover:bg-opacity-0">
               メールでお問い合わせ

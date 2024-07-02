@@ -61,26 +61,26 @@ const ContactPage = () => {
           whileInView={LtoR().onscreen}
           viewport={{ once: false, amount: 0 }}
           className="my-5">
-          <h2 className="text-center font-extrabold text-yellow-500 text-4xl overline tracking-wide">
+          <h2 className="text-center font-extrabold text-yellow-500 text-5xl overline tracking-wide">
             CONTACT
           </h2>
-          <p className="text-center text-yellow-500 tracking-wide">-お問い合わせ-</p>
+          <p className="text-center text-yellow-500 tracking-wide text-xl">-お問い合わせ-</p>
         </motion.div>
         <motion.div
           initial={LtoR().offscreen}
           whileInView={LtoR(0.5).onscreen}
           viewport={{ once: false, amount: 0 }}
           className="p-5 text-center">
-          <p className="p-5 text-gray-600">
+          <p className="p-5 text-gray-600 text-lg lg:text-xl">
             私たちのサービスにご関心をお寄せいただきありがとうございます。<br />
             電気工事に関するご質問やお見積もりのご依頼、ご相談など、どのようなことでもお気軽にお問い合わせください。<br />
             専門のスタッフが迅速に対応させていただきます。
           </p>
-          <a className="flex gap-3 items-center justify-center font-extrabold text-2xl"
-            href="tel:000-1234-5678">
-            <FiPhoneCall />000-1234-5678
+          <a className="flex gap-3 items-center justify-center font-extrabold text-3xl"
+            href="tel:086-264-8888">
+            <FiPhoneCall />086-264-8888
           </a>
-          <p className="py-2 text-gray-600">受付時間 / 9:00-18:00 (土日祝除く)</p>
+          <p className="py-2 text-gray-600 text-lg lg:text-xl">受付時間 / 8:00~17:00(土日祝除く)</p>
         </motion.div>
 
         <motion.svg
@@ -112,9 +112,8 @@ const ContactPage = () => {
 
       <div className="h-full px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
 
+
         {/* FORM CONTAINER */}
-
-
         <motion.form
           initial={BtoU().offscreen}
           whileInView={BtoU().onscreen}
@@ -207,7 +206,7 @@ const ContactPage = () => {
             ">
             送信
           </button>
-          <div className="flex items-center justify-center text-4xl my-[80px]">
+          <div className="flex items-center justify-center text-lg sm:text-4xl my-[80px]">
             <div>
               {text.split("").map((letter, index) => (
                 <motion.span
