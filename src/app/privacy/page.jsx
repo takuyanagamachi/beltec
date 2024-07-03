@@ -6,7 +6,7 @@ import { IoMdLock } from "react-icons/io";
 const PrivacyPage = () => {
 
   return (
-    <div className="">
+    <div className="bgImageWhite">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [-50, 0] }}

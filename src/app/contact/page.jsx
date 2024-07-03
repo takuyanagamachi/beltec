@@ -34,7 +34,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="mt-[50px]">
+    <div className="mt-[50px] bgImageWhite">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [-50, 0] }}
@@ -119,7 +119,7 @@ const ContactPage = () => {
           whileInView={BtoU().onscreen}
           viewport={{ once: false, amount: 0 }}
           ref={form} onSubmit={sendEmail}
-          className="w-full mx-auto my-[120px] bg-gray-50 p-[50px] rounded">
+          className="w-full mx-auto mt-[120px]  p-[50px] rounded">
 
           <div className="relative z-0 w-full mb-5 group">
             <input type="text" name="company" id="form_companyName"

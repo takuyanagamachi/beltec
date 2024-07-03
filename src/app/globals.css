@@ -28,8 +28,8 @@
   /* background-repeat: no-repeat; */
 }
 
-.backgroundImageaa {
-  background-image: url('/bg-white.jpg');
+.bgImageWhite {
+  background-image: url('/bg-white2.jpg');
   background-position: center;
   background-size: cover;
 }
