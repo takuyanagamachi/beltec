@@ -1,57 +1,13 @@
-"use client"
-import Contact from "@/components/contact";
-import { motion } from "framer-motion";
+"use client";
+import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
-import { BtoU, LtoR } from "../motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import { LtoR, BtoU, RtoL } from "@/app/motion";
+import Contact from "@/components/contact";
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
-
-
-const items = [
-  {
-    id: 1,
-    color: "from-red-300 to-blue-300",
-    title: "React Commerce",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
-  },
-  {
-    id: 2,
-    color: "from-blue-300 to-violet-300",
-    title: "Next.js Medium Blog",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
-  },
-  {
-    id: 3,
-    color: "from-violet-300 to-purple-300",
-    title: "Vanilla Book App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
-  },
-  {
-    id: 4,
-    color: "from-purple-300 to-red-300",
-    title: "Spotify Music App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "https://lama.dev",
-  },
-];
-
-const PortfolioPage = () => {
+const InfoPage = () => {
 
   return (
-    <div className="">
+    <div>
       {/* hero  */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -68,7 +24,7 @@ const PortfolioPage = () => {
         </div>
         <div className="relative h-full z-10 flex flex-col justify-center items-center">
           <h1 className="p-2 bg-black bg-opacity-50 rounded-md sm:text-5xl text-4xl font-bold leading-tight mb-4">
-            事業内容
+            企業情報
           </h1>
         </div>
       </motion.div>
@@ -76,86 +32,135 @@ const PortfolioPage = () => {
 
       {/* COMPANY */}
       <div className="container mx-auto">
-        <div className="grid grid-col md:p-8 lg:p-20 xl:p-36">
+        <div className="grid grid-col md:p-12 lg:p-20 xl:p-36">
           <motion.div
             initial={LtoR().offscreen}
             whileInView={LtoR().onscreen}
             viewport={{ once: false, amount: 0 }}
             className="my-16 text-center">
             <h2 className="font-extrabold text-yellow-500 text-5xl overline tracking-wide">
-              WORK
+              COMPANY
             </h2>
-            <p className="text-yellow-500 tracking-wide text-xl">-事業内容-</p>
+            <p className="text-yellow-500 tracking-wide text-xl">-会社概要-</p>
           </motion.div>
 
-          <div className="container mx-auto py-16 px-4 sm:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-              <motion.div
-                initial={LtoR().offscreen}
-                whileInView={LtoR().onscreen}
-                viewport={{ once: false, amount: 0 }}
-                className="max-w-lg mx-auto"
-              >
-                <h2 className="text-center md:text-left font-extrabold text-yellow-500 text-2xl lg:text-4xl tracking-wide mb-8">
-                  電気の安全、<br />私たちが守ります。
-                </h2>
-                <p className="mt-5 text-gray-600 text-md lg:text-xl">
-                  私たちは、お客様の安心と満足を最優先に考えた電気工事サービスを提供します。
-                  経験豊富なスタッフが最新の技術を駆使し、高品質な施工をお約束します。
-                  小さな修理から大規模な電気工事まで
-                </p>
-                <div className="mt-8">
+          <motion.div
+            initial={LtoR().offscreen}
+            whileInView={LtoR().onscreen}
+            viewport={{ once: false, amount: 0 }}
+            className="list-none grid grid-cols-2 backgroundImage min-h-[1600px] container mx-auto"
+          >
+            <li className=" w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              創業
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              1994年6月
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              設立
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              1997年12月
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              資本金
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              35,000千円
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              代表者
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              前場 恵介
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              従業員数
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              39名
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              営業時間
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              8:00~17:00
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              定休日
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              日曜日、第2・4土曜日、年末年始
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              建設業許可
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              電気工事業・管工事業・建設工事業
+              岡山県知事許可 特定 第25388号
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              営 業 許 可
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              一般貨物自動車運送事業許可<br />
+              中国自貨第137号<br />
+              産業廃棄物収集運搬業<br />
+              岡山県第03300140828号<br />
+              香川県第03709140828号<br />
+              第一種フロン類充填回収業者<br />
+              岡山県 登録番号 第331110157号
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              事業所
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              <ul>
+                <li className="border-b-2 border-yellow-200">本社 〒700-0845 岡山県岡山市南区浜野4丁目17番6号
+                  TEL086-264-8888/FAX086-264-1988</li>
+                <li>四国営業所 〒767-0012 香川県三豊市高瀬町上勝間字山王211
+                  TEL0875-23-7211/FAX0875-23-7211</li>
+              </ul>
 
-                </div>
-              </motion.div>
-              <motion.div
-                initial={BtoU().offscreen}
-                whileInView={BtoU().onscreen}
-                viewport={{ once: false, amount: 0 }}
-                className="mt-10 md:mt-0 mx-auto max-w-96 shadow-2xl shadow-yellow-100"
-              >
-                <Image height={400} width={400}
-                  src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
-                  alt="About Us Image"
-                  className="object-cover rounded-lg shadow-md w-full"
-                />
-              </motion.div>
-            </div>
-          </div>
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              取引先
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              岡山県、岡山市、中国電力株式会、株式会社中電工、
+              双葉電機株式会社、ダイダン株式会社、栗原工業株式会社、建設会社各社
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              仕入先
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              八州電気工業株式会社、正二電気株式会社、シンセイ株式会社、
+              暁電業株式会社、双葉電機株式会社、三親電材株式会社、
+              渡辺パイプ株式会社、小林電工株式会社
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              協力会社
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              工事関連20社
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              取引先銀行
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              中国銀行 福浜支店 、 香川銀行 岡山南支店 、
+              トマト銀行 原尾島支店、百十四銀行 岡山南支店
+            </li>
+          </motion.div>
 
-          <div className="container mx-auto py-16 px-4 sm:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-              <motion.div
-                initial={BtoU().offscreen}
-                whileInView={BtoU().onscreen}
-                viewport={{ once: false, amount: 0 }}
-                className="mt-10 md:mt-0 mx-auto max-w-96 shadow-2xl shadow-yellow-100"
-              >
-                <Image height={400} width={400}
-                  src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
-                  alt="About Us Image"
-                  className="object-cover rounded-lg shadow-md w-full"
-                />
-              </motion.div>
-              <motion.div
-                initial={LtoR().offscreen}
-                whileInView={LtoR().onscreen}
-                viewport={{ once: false, amount: 0 }}
-                className="max-w-lg mx-auto"
-              >
-                <h2 className="text-center md:text-right font-extrabold text-yellow-500 text-2xl lg:text-4xl tracking-wide mb-8">
-                  電気の安全、<br />私たちが守ります。
-                </h2>
-                <p className="mt-5 text-gray-600 text-md lg:text-xl">
-                  私たちは、お客様の安心と満足を最優先に考えた電気工事サービスを提供します。
-                  経験豊富なスタッフが最新の技術を駆使し、高品質な施工をお約束します。
-                  小さな修理から大規模な電気工事まで
-                </p>
-                <div className="mt-8">
 
-                </div>
-              </motion.div>
-            </div>
+          <div className="map mt-[70px] mx-auto w-full">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13132.093133219025!2d133.93413985!3d34.6288519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355407e260208ed1%3A0xd4212be1dec9945d!2zKOagqinjg5njg6vjg4bjg4Pjgq8!5e0!3m2!1sja!2sjp!4v1719129325223!5m2!1sja!2sjp"
+              width="1200" height="400"
+              className="w-full aspect-video bordered"
+              allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
 
           <div className="clear-both my-[120px]"></div>
@@ -180,12 +185,192 @@ const PortfolioPage = () => {
               className=""
             >
 
+              {/* LEFT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
+                    1994年6月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
+                    株式会社ベルテック前身にあたるテクノサービス設立、家電事業開始
+                  </div>
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3"></div>
+              </div>
 
 
+              {/* RIGHT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
+                    1996年10月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
+                    電気設備事業、空調設備事業、アンテナ設備事業、弱電・通信事業開始
+                  </div>
+                </div>
+              </div>
 
+              {/* LEFT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
+                    1997年12月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
+                    資本金3,000千円にて、有限会社ベルテック設立
+                  </div>
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3"></div>
+              </div>
 
+              {/* RIGHT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
+                    2002年1月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
+                    資本金10,000千円に増資
+                  </div>
+                </div>
+              </div>
 
+              {/* LEFT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
+                    2006年8月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
+                    株式会社ベルテックに組織変更
+                  </div>
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3"></div>
+              </div>
 
+              {/* RIGHT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
+                    2010年9月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
+                    給排水設備事業開始<br />
+                    太陽光事業開始
+                  </div>
+                </div>
+              </div>
+
+              {/* LEFT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
+                    2013年1月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
+                    資本金17,000千円に増資
+                  </div>
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3"></div>
+              </div>
+
+              {/* RIGHT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
+                    2014年2月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
+                    資本金25,000千円に増資
+                  </div>
+                </div>
+              </div>
+
+              {/* LEFT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
+                    2014年4月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
+                    四国営業所開設
+                  </div>
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3"></div>
+              </div>
+
+              {/* RIGHT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
+                    2015年2月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
+                    資本金35,000千円に増資
+                  </div>
+                </div>
+              </div>
 
             </motion.div>
           </div>
@@ -193,72 +378,7 @@ const PortfolioPage = () => {
       </div>
       <Contact />
     </div >
-  )
-}
+  );
+};
 
-export default PortfolioPage
-
-{/* <motion.div
-      className="h-full"
-      initial={{ y: "-200vh" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
-    >
-      <div className="h-[600vh]" ref={ref}>
-        <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
-          My WOrks
-        </div>
-        <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
-          <motion.div style={{ x }} className="flex">
-            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
-            {items.map(item => (
-              <div className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
-                key={item.id}>
-                <div className="flex flex-col gap-8 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
-                    {item.title}
-                  </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-                    <Image src={item.img} alt="" fill />
-                  </div>
-                  <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
-                    {item.desc}
-                  </p>
-                  <Link href={item.link} className="flex justify-end">
-                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">See Demo</button>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
-        <h1 className="text-8xl">Do you have a project?</h1>
-        <div className="relative">
-          <motion.svg
-            animate={{ rotate: 360 }}
-            transition={{ duration: 8, ease: "linear", repeat: Infinity }}
-            viewBox="0 0 300 300"
-            className="w-64 h-64 md:w-[500px] md:h-[500px] "
-          >
-            <defs>
-              <path
-                id="circlePath"
-                d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-              />
-            </defs>
-            <text fill="#000">
-              <textPath xlinkHref="#circlePath" className="text-xl">
-                Front-end Developer and UI Designer
-              </textPath>
-            </text>
-          </motion.svg>
-          <Link
-            href="/contact"
-            className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
-          >Hire Me
-          </Link>
-        </div>
-      </div>
-    </motion.div> */}
+export default InfoPage

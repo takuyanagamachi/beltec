@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 
 const links = [
   // { url: "/", img: "/BeltecLogohen.png" },
-  { url: "/info", title: "企業情報" },
-  { url: "/about", title: "事業内容" },
+  { url: "/about", title: "企業情報" },
+  { url: "/service", title: "事業内容" },
   { url: "/contact", title: "お問い合わせ" },
   { url: "/privacy", title: "プライバシーポリシー" },
 ];

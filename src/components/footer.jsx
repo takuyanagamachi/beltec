@@ -15,13 +15,13 @@ const Footer = () => {
         </div>
         <ul className="md:flex text-center justify-end items-center mt-3 w-full text-sm font-medium text-gray-300">
           <li className="py-1 text-lg">
-            <Link href="/info"
+            <Link href="/about"
               className=" me-4 md:me-6 transition duration-100  hover:text-white">
               企業情報
             </Link>
           </li>
           <li className="py-1 text-lg">
-            <Link href="/about"
+            <Link href="/service"
               className="me-4 md:me-6 transition duration-100  hover:text-white">
               事業内容
             </Link>

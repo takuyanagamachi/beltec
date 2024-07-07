@@ -1,40 +1,14 @@
 "use client"
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { FiPhoneCall } from "react-icons/fi";
-import { MdOutlineMail } from "react-icons/md";
-import { LtoR, BtoU, RtoL } from "@/app/motion";
+import { LtoR, BtoU } from "@/app/motion";
 import Contact from "@/components/contact";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const items = [
-  {
-    id: 1,
-    color: "from-gray-200 to-gray-300",
-    title: "事業１",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
-  },
-  {
-    id: 2,
-    color: "from-gray-300 to-gray-400",
-    title: "事業２",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
-  },
-  {
-    id: 3,
-    title: "事業３",
-    color: "from-gray-400 to-gray-500",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
-  },
-];
+
 
 const Homepage = () => {
 
@@ -121,12 +95,11 @@ const Homepage = () => {
                   常にお客様のニーズに応えることを目指しています。</li>
               </ul>
               <div className="mt-8">
-                <Link href="/info" className="mb-[60px] flex justify-end">
+                <Link href="/about" className="mb-[60px] flex justify-end">
                   <button className="flex justify-end 
             p-0.5 mb-2 me-2 text-md font-bold rounded-full text-gray-700 group 
             bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200">
                     <span className=" px-5 py-2.5 transition-all ease-in duration-200 bg-white rounded-full group-hover:bg-opacity-0 hover:text-white">
-                      {/* <FiPhoneCall className="text-xl inline mr-3" /> */}
                       もっと見る
                     </span>
                   </button>
@@ -137,7 +110,7 @@ const Homepage = () => {
               initial={BtoU().offscreen}
               whileInView={BtoU().onscreen}
               viewport={{ once: false, amount: 0 }}
-              className="mt-10 md:mt-0 mx-auto max-w-96 shadow-2xl shadow-yellow-100"
+              className="rounded-lg mt-10 md:mt-0 mx-auto max-w-96 shadow-2xl shadow-gray-700"
             >
               <Image height={400} width={400}
                 src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
@@ -150,81 +123,57 @@ const Homepage = () => {
 
         <div className="my-[120px]"></div>
 
-        {/* work */}
-        <section className="py-16 h-full">
-          <motion.div
-            initial={LtoR().offscreen}
-            whileInView={LtoR().onscreen}
+        {/* service */}
+        <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+          <motion.div className=""
+            initial={BtoU().offscreen}
+            whileInView={BtoU().onscreen}
             viewport={{ once: false, amount: 0 }}
-            className="my-5">
+          >
             <h2 className="text-center font-extrabold text-yellow-500 text-5xl overline tracking-wide">
               SERVICE
             </h2>
-            <p className="text-center text-yellow-500 tracking-wide text-xl">-事業内容-</p>
+            <p className="mb-11 text-center text-xl text-yellow-500 tracking-wide">-事業内容-</p>
           </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 px-3 py-3 mt-[100px]">
-            {/* first */}
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <motion.div
               initial={BtoU().offscreen}
               whileInView={BtoU().onscreen}
               viewport={{ once: false, amount: 0 }}
-              className="relative p-1 bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200 max-w-sm overflow-hidden bg-cover bg-no-repeat shadow-lg mx-auto rounded">
+              className="rounded-lg mt-10 md:mt-0 mx-auto max-w-96 shadow-2xl shadow-gray-700"
+            >
               <Image height={300} width={300}
-                src="https://images.unsplash.com/photo-1636218685495-8f6545aadb71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RWxlY3RyaWNhbCUyMHdvcmtlcnxlbnwwfHwwfHx8MA%3D%3D"
-                class="w-full h-60 object-cover flex mx-auto transition duration-300 ease-in-out hover:scale-110"
-                alt="Louvre"
+                src="https://images.unsplash.com/photo-1553873002-785d775854c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWxlY3RyaWNhbCUyMHdvcmt8ZW58MHwwfDB8fHwy"
+                alt="About Us Image"
+                className="object-cover rounded-lg shadow-md w-full h-80"
               />
-              <div className="px-6 py-4 bg-white rounded-b">
-                <div className="font-bold text-xl mb-2">電線の修理保全</div>
-                <p className="text-gray-600 text-base">
-                  私たちの生活に欠かせない「電気」と言うエネルギーのインフラを支えます。
-                </p>
-                <Link href="/" className="grid justify-items-end">もっと見る</Link>
+            </motion.div>
+            <motion.div
+              initial={LtoR().offscreen}
+              whileInView={LtoR().onscreen}
+              viewport={{ once: false, amount: 0 }}
+              className="max-w-lg"
+            >
+              <ul className="pl-4 mt-8 text-gray-600 text-md lg:text-xl">
+                <li className="my-4">電線の修理保全</li>
+                <li className="my-4">私たちの生活に欠かせない「電気」と言うエネルギーのインフラを支えます。</li>
+                <li className="my-4">私たちの生活に欠かせない「電気」と言うエネルギーのインフラを支えます。</li>
+              </ul>
+              <div className="mt-8">
+                <Link href="/service" className="mb-[60px] flex">
+                  <button className="flex justify-end 
+            p-0.5 mb-2 me-2 text-md font-bold rounded-full text-gray-700 group 
+            bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200">
+                    <span className=" px-5 py-2.5 transition-all ease-in duration-200 bg-white rounded-full group-hover:bg-opacity-0 hover:text-white">
+                      もっと見る
+                    </span>
+                  </button>
+                </Link>
               </div>
             </motion.div>
 
-            {/* second */}
-            <motion.div
-              initial={BtoU().offscreen}
-              whileInView={BtoU(0.2).onscreen}
-              viewport={{ once: false, amount: 0 }}
-              className="relative p-1 bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200 max-w-sm overflow-hidden bg-cover bg-no-repeat shadow-lg mx-auto rounded">
-              <Image height={300} width={300}
-                src="https://images.unsplash.com/photo-1636218685495-8f6545aadb71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RWxlY3RyaWNhbCUyMHdvcmtlcnxlbnwwfHwwfHx8MA%3D%3D"
-                class="w-full h-60 object-cover flex mx-auto transition duration-300 ease-in-out hover:scale-110"
-                alt="Louvre"
-              />
-              <div className="px-6 py-4 bg-white rounded-b">
-                <div className="font-bold text-xl mb-2">電線の修理保全</div>
-                <p className="text-gray-600 text-base">
-                  私たちの生活に欠かせない「電気」と言うエネルギーのインフラを支えます。
-                </p>
-                <Link href="/" className="grid justify-items-end">もっと見る</Link>
-              </div>
-            </motion.div>
-
-            {/* third */}
-            <motion.div
-              initial={BtoU().offscreen}
-              whileInView={BtoU(0.4).onscreen}
-              viewport={{ once: false, amount: 0 }}
-              className="relative p-1 bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200 max-w-sm overflow-hidden bg-cover bg-no-repeat shadow-lg mx-auto rounded">
-              <Image height={300} width={300}
-                src="https://images.unsplash.com/photo-1636218685495-8f6545aadb71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RWxlY3RyaWNhbCUyMHdvcmtlcnxlbnwwfHwwfHx8MA%3D%3D"
-                class="w-full h-60 object-cover flex mx-auto transition duration-300 ease-in-out hover:scale-110"
-                alt="Louvre"
-              />
-              <div className="px-6 py-4 bg-white rounded-b">
-                <div className="font-bold text-xl mb-2">電線の修理保全</div>
-                <p className="text-gray-600 text-base">
-                  私たちの生活に欠かせない「電気」と言うエネルギーのインフラを支えます。
-                </p>
-                <Link href="/" className="grid justify-items-end">もっと見る</Link>
-              </div>
-            </motion.div>
           </div>
-        </section>
+        </div>
 
         <div className="my-[120px]"></div>
 
