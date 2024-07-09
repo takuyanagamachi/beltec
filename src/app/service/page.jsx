@@ -3,9 +3,10 @@ import Contact from "@/components/contact";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { BtoU, LtoR } from "../motion";
+import { BtoU, HtoH, LtoR } from "../motion";
 import Modal from "@/components/modal";
 import { useState } from "react";
+import Call_now from "@/components/call_now";
 
 
 const PortfolioPage = () => {
@@ -121,6 +122,14 @@ const PortfolioPage = () => {
         </div>
 
         <div className="clear-both my-[120px]"></div>
+
+        {/* EMContact */}
+        <motion.div
+          initial={HtoH().offscreen}
+          whileInView={HtoH().onscreen}
+          viewport={{ once: true, amount: 0 }}>
+          <Call_now />
+        </motion.div>
 
         <div className="flex flex-col gap-12 rounded p-[30px]">
 

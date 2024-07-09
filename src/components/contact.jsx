@@ -29,10 +29,10 @@ const Contact = () => {
           <br />電気工事に関するご質問やお見積もりのご依頼、ご相談など、どのようなことでもお気軽にお問い合わせください。<br />
           専門のスタッフが迅速に対応させていただきます。
         </p>
-        <a className="flex gap-3 items-center justify-center font-extrabold text-3xl"
+        <Link className="flex gap-3 items-center justify-center font-extrabold text-3xl"
           href="tel:086-264-8888">
           <FiPhoneCall />086-264-8888
-        </a>
+        </Link>
         <p className="py-2 text-gray-600 text-lg lg:text-xl">受付時間 / 8:00~17:00 (土日祝除く)</p>
       </motion.div>
 

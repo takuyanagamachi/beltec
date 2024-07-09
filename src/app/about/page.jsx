@@ -1,8 +1,9 @@
 "use client";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
-import { LtoR, BtoU, RtoL } from "@/app/motion";
+import { LtoR, BtoU, RtoL, HtoH } from "@/app/motion";
 import Contact from "@/components/contact";
+import Call_now from "@/components/call_now";
 
 const InfoPage = () => {
 
@@ -50,6 +51,7 @@ const InfoPage = () => {
             viewport={{ once: false, amount: 0 }}
             className="list-none grid grid-cols-2 backgroundImage min-h-[1600px] container mx-auto"
           >
+
             <li className=" w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
               創業
             </li>
@@ -152,7 +154,13 @@ const InfoPage = () => {
               トマト銀行 原尾島支店、百十四銀行 岡山南支店
             </li>
           </motion.div>
-
+          {/* EMContact */}
+          <motion.div
+            initial={HtoH().offscreen}
+            whileInView={HtoH().onscreen}
+            viewport={{ once: true, amount: 0 }}>
+            <Call_now />
+          </motion.div>
 
           <div className="map mt-[70px] mx-auto w-full">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13132.093133219025!2d133.93413985!3d34.6288519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355407e260208ed1%3A0xd4212be1dec9945d!2zKOagqinjg5njg6vjg4bjg4Pjgq8!5e0!3m2!1sja!2sjp!4v1719129325223!5m2!1sja!2sjp"

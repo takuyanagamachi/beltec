@@ -3,10 +3,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FiPhoneCall } from "react-icons/fi";
-import { LtoR, BtoU } from "@/app/motion";
+import { LtoR, BtoU, HtoH } from "@/app/motion";
 import Contact from "@/components/contact";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Call_now from "@/components/call_now";
 
 
 
@@ -29,8 +30,8 @@ const Homepage = () => {
           className="w-auto max-w-full mx-auto"
         />
 
-        <div className="flex flex-col text-center">
-          <h1 className="text-4xl md:text-6xl px-5 font-bold leading-tight container mx-auto">
+        <div className="text-center">
+          <h1 className="mb-[80px] text-3xl sm:text-4xl md:text-5xl lg:text-6xl px-5 font-bold leading-tight container mx-auto">
             あなたの生活を<span className="text-yellow-500">明るく照らす💡</span>
             <br />安心の
             <span className="text-yellow-500">電気工事</span>
@@ -74,7 +75,6 @@ const Homepage = () => {
       <div className="my-[120px]"></div>
 
       <div className="bgImageWhite">
-
         {/* about */}
         <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
@@ -120,6 +120,14 @@ const Homepage = () => {
             </motion.div>
           </div>
         </div>
+
+        {/* EMContact */}
+        <motion.div
+          initial={HtoH().offscreen}
+          whileInView={HtoH().onscreen}
+          viewport={{ once: true, amount: 0 }}>
+          <Call_now />
+        </motion.div>
 
         <div className="my-[120px]"></div>
 

@@ -1,12 +1,13 @@
 "use client"
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { BtoU, LtoR } from "../motion";
+import { BtoU, HtoH, LtoR } from "../motion";
 import Link from "next/link";
 import { FiPhoneCall } from "react-icons/fi";
 import { useRef } from "react";
 import emailjs from '@emailjs/browser';
 import { toast } from "react-toastify";
+import Call_now from "@/components/call_now";
 
 const ContactPage = () => {
 
@@ -50,7 +51,7 @@ const ContactPage = () => {
         </div>
         <div className="relative h-full z-10">
           <h1 className="w-full h-full flex justify-center items-center bg-black bg-opacity-80 sm:text-5xl text-4xl font-bold leading-tight">
-            CONTACT
+            お問い合わせ
           </h1>
         </div>
       </motion.div>
@@ -108,7 +109,13 @@ const ContactPage = () => {
         </motion.svg>
       </section >
 
-
+      {/* EMContact */}
+      <motion.div
+        initial={HtoH().offscreen}
+        whileInView={HtoH().onscreen}
+        viewport={{ once: true, amount: 0 }}>
+        <Call_now />
+      </motion.div>
 
       <div className="h-full px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
 

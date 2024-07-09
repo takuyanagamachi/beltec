@@ -22,7 +22,7 @@ const PrivacyPage = () => {
         </div>
         <div className="relative h-full z-10">
           <h1 className="w-full h-full flex justify-center items-center bg-black bg-opacity-80 sm:text-5xl text-4xl font-bold leading-tight">
-            PRIVACY POLICY
+            プライバシーポリシー
           </h1>
         </div>
       </motion.div>

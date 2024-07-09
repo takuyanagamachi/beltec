@@ -39,3 +39,17 @@ export function BtoU(delay) {
     },
   };
 }
+
+export function HtoH(delay) {
+  return {
+    offscreen: { x: 0, opacity: 0 },
+    onscreen: {
+      x: 0, opacity: 1,
+      transition: {
+        duration: 1.5,
+        ease: "easeOut",
+        delay: delay,
+      },
+    },
+  };
+}
