@@ -41,7 +41,7 @@ const Footer = () => {
         </ul>
       </div>
       <p className='text-center pt-[50px] pb-1'>
-        &copy;1994 -{new Date().getFullYear()}  株式会社 ベルテックス
+        &copy;1994 -{new Date().getFullYear()}  株式会社 ベルテック
       </p>
     </footer>
 
