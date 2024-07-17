@@ -16,26 +16,32 @@ const Footer = () => {
         <ul className="md:flex text-center justify-end items-center mt-3 w-full text-sm font-medium text-gray-300">
           <li className="py-1 text-lg">
             <Link href="/about"
-              className=" me-4 md:me-6 transition duration-100  hover:text-white">
+              className=" me-4  transition duration-100  hover:text-white">
               企業情報
             </Link>
           </li>
           <li className="py-1 text-lg">
             <Link href="/service"
-              className="me-4 md:me-6 transition duration-100  hover:text-white">
+              className="me-4  transition duration-100  hover:text-white">
               事業内容
             </Link>
           </li>
           <li className="py-1 text-lg">
             <Link href="/contact"
-              className="me-4 md:me-6 transition duration-100  hover:text-white">
+              className="me-4  transition duration-100  hover:text-white">
               お問い合わせ
             </Link>
           </li>
           <li className="py-1 text-lg">
             <Link href="/privacy"
-              className="me-4 md:me-6 transition duration-100  hover:text-white">
+              className="me-4  transition duration-100  hover:text-white">
               プライバシーポリシー
+            </Link>
+          </li>
+          <li className="py-1 text-lg">
+            <Link href="/recruit"
+              className="me-4 md:me-6 transition duration-100  hover:text-white">
+              採用情報
             </Link>
           </li>
         </ul>
