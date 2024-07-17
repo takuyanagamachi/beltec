@@ -14,17 +14,17 @@ const InfoPage = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [-50, 0] }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="h-96 relative bg-gradient-to-r from-purple-600 to-blue-600 text-white overflow-hidden">
+        className="h-96 relative bg-white text-white mt-20">
         <div className="absolute inset-0">
-          <Image height={300} width={300}
-            src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGNvbXBhbnl8ZW58MHx8MHx8fDA%3D"
-            alt="Background Image"
-            className="object-cover object-center w-full h-96"
+          <Image height={500} width={500}
+            src="/images/about/company-from-up.jpg"
+            alt="ベルテック企業情報"
+            className="object-cover w-full h-96"
           />
           <div className="absolute inset-0 "></div>
         </div>
         <div className="relative h-full z-10 flex flex-col justify-center items-center">
-          <h1 className="p-2 bg-black bg-opacity-50 rounded-md sm:text-5xl text-4xl font-bold leading-tight mb-4">
+          <h1 className="flex w-full h-full items-center justify-center bg-black bg-opacity-70 text-5xl font-bold">
             企業情報
           </h1>
         </div>
@@ -80,7 +80,17 @@ const InfoPage = () => {
               従業員数
             </li>
             <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              39名
+              20名
+            </li>
+            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+              有資格者
+            </li>
+            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
+              1級電気工事施工管理技士/3名<br />
+              2級電気工事施工管理技士/3名<br />
+              第一種電気工事士/15名<br />
+              第二種電気工事士/5名<br />
+              消防設備士 甲種4類/1名<br />
             </li>
             <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
               営業時間
@@ -92,16 +102,15 @@ const InfoPage = () => {
               定休日
             </li>
             <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              日曜日、第2・4土曜日、年末年始
+              日曜日、第2・4土曜日、祝日、年末年始
             </li>
             <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
               建設業許可
             </li>
             <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              電気工事業・管工事業・建設工事業
-              岡山県知事許可 特定 第25388号
+              電気工事業 岡山県知事許可 特定 第25388号
             </li>
-            <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
+            {/* <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
               営 業 許 可
             </li>
             <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
@@ -112,33 +121,28 @@ const InfoPage = () => {
               香川県第03709140828号<br />
               第一種フロン類充填回収業者<br />
               岡山県 登録番号 第331110157号
-            </li>
+            </li> */}
             <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
               事業所
             </li>
             <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              <ul>
-                <li className="border-b-2 border-yellow-200">本社 〒700-0845 岡山県岡山市南区浜野4丁目17番6号
-                  TEL086-264-8888/FAX086-264-1988</li>
-                <li>四国営業所 〒767-0012 香川県三豊市高瀬町上勝間字山王211
-                  TEL0875-23-7211/FAX0875-23-7211</li>
-              </ul>
-
+              本社 〒700-0845 岡山県岡山市南区浜野4丁目17番6号
+              TEL 086-264-8888/FAX 086-264-1988
             </li>
             <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
               取引先
             </li>
             <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              岡山県、岡山市、中国電力株式会、株式会社中電工、
-              双葉電機株式会社、ダイダン株式会社、栗原工業株式会社、建設会社各社
+              岡山市、中国電力株式会社、中国建設工業株式会社、
+              株式会社合田工務店、ライフデザイン・カバヤ株式会社
             </li>
             <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
               仕入先
             </li>
             <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              八州電気工業株式会社、正二電気株式会社、シンセイ株式会社、
-              暁電業株式会社、双葉電機株式会社、三親電材株式会社、
-              渡辺パイプ株式会社、小林電工株式会社
+              八州電気工業株式会社、シンセイ株式会社、
+              暁電業株式会社、双葉電機株式会社、
+              小林電工株式会社、三親電材株式会社、
             </li>
             <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
               協力会社
@@ -150,8 +154,7 @@ const InfoPage = () => {
               取引先銀行
             </li>
             <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              中国銀行 福浜支店 、 香川銀行 岡山南支店 、
-              トマト銀行 原尾島支店、百十四銀行 岡山南支店
+              中国銀行、トマト銀行、百十四銀行
             </li>
           </motion.div>
           {/* EMContact */}

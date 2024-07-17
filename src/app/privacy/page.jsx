@@ -11,21 +11,22 @@ const PrivacyPage = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [-50, 0] }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="h-96 relative bg-gradient-to-r from-purple-600 to-blue-600 text-white overflow-hidden">
+        className="h-96 relative bg-white text-white mt-20">
         <div className="absolute inset-0">
-          <Image height={300} width={300}
+          <Image height={500} width={500}
             src="/privacy-policy.jpg"
-            alt="Background Image"
-            className="object-cover object-center w-full h-96"
+            alt="ベルテック個人情報の取り扱い"
+            className="object-cover w-full h-96"
           />
           <div className="absolute inset-0 "></div>
         </div>
-        <div className="relative h-full z-10">
-          <h1 className="w-full h-full flex justify-center items-center bg-black bg-opacity-80 sm:text-5xl text-4xl font-bold leading-tight">
+        <div className="relative h-full z-10 flex flex-col justify-center items-center">
+          <h1 className="flex w-full h-full items-center justify-center bg-black bg-opacity-70 text-5xl font-bold">
             プライバシーポリシー
           </h1>
         </div>
       </motion.div>
+
       <section className="py-16 container max-w-2xl mx-auto">
         <motion.div
           initial={LtoR().offscreen}

@@ -11,6 +11,7 @@ const links = [
   { url: "/service", title: "事業内容" },
   { url: "/contact", title: "お問い合わせ" },
   { url: "/privacy", title: "プライバシーポリシー" },
+  { url: "/recruit", title: "採用情報" },
 ];
 
 const Navbar = () => {
@@ -77,12 +78,19 @@ const Navbar = () => {
 
       <nav className="bg-white">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link href="/" className="flex items-center space-x-3">
-            <Image src="/BeltecLogohen.png" width={150} height={150} className="h-12" alt="Flowbite Logo" />
-          </Link>
+
+          <div className="flex justify-start">
+            <Link href="/" className="flex items-center">
+              <Image src="/BeltecLogohen.png" width={150} height={150} className="h-12" alt="ベルテックのロゴ" />
+            </Link>
+            <Link href="https://www.yondenko.co.jp/" target="blank" className="flex items-center mt-2 ml-4">
+              <Image src="/4denLogo.png" width={30} height={30} className="h-8" alt="四電工のロゴ" />
+            </Link>
+          </div>
+
           <div>
             <div className="hidden w-full md:block md:w-auto">
-              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 bg-white md:flex-row md:space-x-8 md:mt-0">
+              <ul className="font-medium flex flex-col justify-end p-4 md:p-0 mt-4 bg-white md:flex-row md:mt-0">
                 {links.map(link => (
                   <NavLink link={link} key={link.title} />
                 ))}
@@ -139,6 +147,74 @@ const Navbar = () => {
 
         </div>
       </nav>
+
+      {/* <nav className="bg-white">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <Link href="/" className="flex items-center space-x-3">
+            <Image src="/BeltecLogohen.png" width={150} height={150} className="h-12" alt="ベルテックのロゴ" />
+          </Link>
+          <Link href="https://www.yondenko.co.jp/" target="blank" className="mr-[240px] flex items-center space-x-1">
+            <Image src="/4denLogo.png" width={50} height={50} className="h-10" alt="四電工のロゴ" />
+          </Link>
+          <div>
+            <div className="hidden w-full md:block md:w-auto">
+              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 bg-white md:flex-row md:space-x-8 md:mt-0">
+                {links.map(link => (
+                  <NavLink link={link} key={link.title} />
+                ))}
+              </ul>
+            </div> */}
+
+      {/* Responsive Menu */}
+      {/* <div className="md:hidden"> */}
+      {/* Menu Button */}
+      {/* <button
+                className="w-10 h-8 flex flex-col justify-between z-50 relative"
+                onClick={() => setOpen((prev) => !prev)}>
+                <motion.div
+                  variants={topVariants}
+                  animate={open ? "opened" : "closed"}
+                  className="w-10 h-1 bg-black rounded origin-left">
+                </motion.div>
+                <motion.div
+                  variants={centerVariants}
+                  animate={open ? "opened" : "closed"}
+                  className="w-10 h-1 bg-black rounded">
+                </motion.div>
+                <motion.div
+                  variants={bottomVariants}
+                  animate={open ? "opened" : "closed"}
+                  className="w-10 h-1 bg-black rounded origin-left">
+                </motion.div>
+              </button> */}
+      {/* Menu list */}
+      {/* {open && (
+                <motion.div
+                  variants={listVariants}
+                  initial="closed"
+                  animate="opened"
+                  className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
+                >
+                  {links.map((link) => (
+                    <motion.div variants={listItemVariants} className="" key={link.title}>
+                      <Link href={link.url} onClick={() => setOpen((prev) => !prev)}>
+                        {link.img ?
+                          <Image src={link.img} width={150} height={150} alt="" />
+                          : <></>
+                        }
+                        {link.title}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              )}
+            </div>
+
+          </div>
+
+
+        </div>
+      </nav> */}
     </motion.div>
   )
 }

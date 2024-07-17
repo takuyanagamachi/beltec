@@ -9,7 +9,7 @@ const NavLink = ({ link }) => {
 
   console.log(pathName)
   return (
-    <Link className="text-gray-600 text-xl mt-3 group transition duration-500  hover:text-yellow-500 relative w-max" href={link.url}>
+    <Link className="px-[7px] text-gray-600 text-md lg:text-xl mt-3 group transition duration-500  hover:text-yellow-500 relative w-max" href={link.url}>
       {
         link.img ?
           <Image src={link.img} width={150} height={150} alt="" />

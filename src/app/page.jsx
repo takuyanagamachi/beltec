@@ -31,12 +31,10 @@ const Homepage = () => {
         />
 
         <div className="text-center">
-          <h1 className="mb-[80px] text-3xl sm:text-4xl md:text-5xl lg:text-6xl px-5 font-bold leading-tight container mx-auto">
-            あなたの生活を<span className="text-yellow-500">明るく照らす💡</span>
-            <br />安心の
-            <span className="text-yellow-500">電気工事</span>
+          <p className="text-gray-400 mb-[30px] text-sm sm:text-md md:text-2xl lg:text-3xl">BEST ELECTRIFY LIFE TECHNICAL</p>
+          <h1 className="line-height text-gray-700 mb-[80px] text-3xl sm:text-4xl md:text-5xl lg:text-6xl px-5 font-bold">
+            電気工事を通じて地域社会の<br />発展と豊かな生活に貢献します
           </h1>
-
           <Link href="/contact" className="my-[60px]">
             <button className="relative inline-flex justify-center 
             p-0.5 mb-2 me-2 text-md font-bold rounded-full text-gray-700 group 
@@ -89,10 +87,15 @@ const Homepage = () => {
               </h2>
               <p className="mb-11 text-center md:text-left text-xl text-yellow-500 tracking-wide">-ベルテックについて-</p>
               <ul className="pl-4 mt-8 text-gray-600 text-md lg:text-xl">
-                <li className="my-4">私たちは、お客様の安心と満足を最優先に考えた電気工事サービスを提供します。</li>
-                <li className="my-4">経験豊富なスタッフが最新の技術を駆使し、高品質な施工をお約束します。</li>
-                <li className="my-4">小さな修理から大規模な電気工事まで、多岐にわたるサービスを展開しており、
-                  常にお客様のニーズに応えることを目指しています。</li>
+                <li className="my-4">私たちは決して現状に満足することなく、
+                  技術水準の向上、新たな知識・技術の習得を常に心掛け、
+                  お客様一人ひとりのニーズを把握し、
+                  的確なご提案が出来るよう挑戦を続けてまいります。
+                </li>
+                <li className="my-4">誠実な仕事、お客様本位の細やかな対応を社員一同のモットーとし、
+                  株式会社ベルテックの持つ技術がお客様に喜んでいただける
+                  サービス提供につながると確信しております。
+                </li>
               </ul>
               <div className="mt-8">
                 <Link href="/about" className="mb-[60px] flex justify-end">
@@ -110,13 +113,11 @@ const Homepage = () => {
               initial={BtoU().offscreen}
               whileInView={BtoU().onscreen}
               viewport={{ once: false, amount: 0 }}
-              className="rounded-lg mt-10 md:mt-0 mx-auto max-w-96 shadow-2xl shadow-gray-700"
+              className="rounded-lg mt-10 md:mt-0 mx-auto w-full shadow-2xl shadow-gray-700"
             >
               <Image height={400} width={400}
-                src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
-                alt="About Us Image"
                 className="object-cover rounded-lg shadow-md w-full"
-              />
+                src="/images/top/company.jpg" alt="株式会社ベルテックの会社" />
             </motion.div>
           </div>
         </div>
@@ -148,12 +149,12 @@ const Homepage = () => {
               initial={BtoU().offscreen}
               whileInView={BtoU().onscreen}
               viewport={{ once: false, amount: 0 }}
-              className="rounded-lg mt-10 md:mt-0 mx-auto max-w-96 shadow-2xl shadow-gray-700"
+              className="rounded-lg mt-10 md:mt-0 mx-auto shadow-2xl shadow-gray-700"
             >
-              <Image height={300} width={300}
-                src="https://images.unsplash.com/photo-1553873002-785d775854c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWxlY3RyaWNhbCUyMHdvcmt8ZW58MHwwfDB8fHwy"
-                alt="About Us Image"
-                className="object-cover rounded-lg shadow-md w-full h-80"
+              <Image height={400} width={400}
+                src="/images/top/service.jpg"
+                alt="株式会社ベルテック電気工事中"
+                className="object-cover rounded-lg shadow-md w-full"
               />
             </motion.div>
             <motion.div
@@ -163,16 +164,22 @@ const Homepage = () => {
               className="max-w-lg"
             >
               <ul className="pl-4 mt-8 text-gray-600 text-md lg:text-xl">
-                <li className="my-4">電線の修理保全</li>
-                <li className="my-4">私たちの生活に欠かせない「電気」と言うエネルギーのインフラを支えます。</li>
-                <li className="my-4">私たちの生活に欠かせない「電気」と言うエネルギーのインフラを支えます。</li>
+                <li className="my-4">
+                  一般住宅からビル・マンション・工場まで全てに対応いたします。
+                </li>
+                <li className="my-4">電気工事を中心とし、通信、空調等設備分野で
+                  設計・施工・管理を行っています。
+                </li>
+                <li className="my-4">
+                  修繕から新設まで、迅速、確実、丁寧に対応いたします。
+                </li>
               </ul>
               <div className="mt-8">
                 <Link href="/service" className="mb-[60px] flex">
                   <button className="flex justify-end 
             p-0.5 mb-2 me-2 text-md font-bold rounded-full text-gray-700 group 
             bg-gradient-to-r from-yellow-200 via-red-200 to-blue-200">
-                    <span className=" px-5 py-2.5 transition-all ease-in duration-200 bg-white rounded-full group-hover:bg-opacity-0 hover:text-white">
+                    <span className="px-5 py-2.5 transition-all ease-in duration-200 bg-white rounded-full group-hover:bg-opacity-0 hover:text-white">
                       もっと見る
                     </span>
                   </button>

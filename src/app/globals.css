@@ -13,6 +13,11 @@
   }
 }
 
+/* Top page h1 */
+.line-height {
+  line-height: 1.25 !important;
+}
+
 .backgroundImage {
   background-image: url('/BeltecLogoVertical.png');
   /* background-size: cover; */

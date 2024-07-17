@@ -19,7 +19,7 @@ const Modal = ({ isVisible, onClose }) => {
           ×
         </button>
         <div className="bg-white p-2 rounded z-50">
-          <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+          <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service1.jpg" alt="" />
         </div>
       </div>
     </div >

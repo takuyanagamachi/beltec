@@ -18,22 +18,21 @@ const PortfolioPage = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [-50, 0] }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="h-96 relative text-white overflow-hidden">
+        className="h-96 relative bg-white text-white mt-20">
         <div className="absolute inset-0">
-          <Image height={300} width={300}
-            src="https://images.unsplash.com/photo-1563770660941-20978e870e26?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
-            alt="Background Image"
-            className="object-cover object-center w-full  "
+          <Image height={500} width={500}
+            src="/images/service/haidenban.jpg"
+            alt="ベルテック事業内容"
+            className="object-cover w-full h-96"
           />
           <div className="absolute inset-0 "></div>
         </div>
         <div className="relative h-full z-10 flex flex-col justify-center items-center">
-          <h1 className="p-2 bg-black bg-opacity-50 rounded-md sm:text-5xl text-4xl font-bold leading-tight mb-4">
+          <h1 className="flex w-full h-full items-center justify-center bg-black bg-opacity-70 text-5xl font-bold">
             事業内容
           </h1>
         </div>
       </motion.div>
-
 
       {/* COMPANY */}
       <div className="container mx-auto">
@@ -156,45 +155,42 @@ const PortfolioPage = () => {
               className="cursor text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               onClick={() => setShowModal(true)}
             >
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service1.jpg" alt="" />
             </button>
             <Modal isVisible={showModal} onClose={() => setShowModal(false)} />
             <div>
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service2.jpg" alt="" />
             </div>
             <div>
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service3.jpg" alt="" />
             </div>
             <div>
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service4.jpg" alt="" />
             </div>
 
             <div>
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service5.jpg" alt="" />
             </div>
             <div>
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service6.jpg" alt="" />
             </div>
             <div>
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service7.jpg" alt="" />
             </div>
             <div>
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service8.jpg" alt="" />
             </div>
             <div>
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service9.jpg" alt="" />
             </div>
             <div>
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service10.jpg" alt="" />
             </div>
             <div>
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service11.jpg" alt="" />
             </div>
             <div>
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
-            </div>
-            <div>
-              <Image width={500} height={500} className="max-w-full rounded-lg" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="" />
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service12.jpg" alt="" />
             </div>
 
 
