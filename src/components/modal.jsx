@@ -1,8 +1,7 @@
 "use client"
 import Image from "next/image";
-import Link from "next/link"
 
-const Modal = ({ isVisible, onClose }) => {
+const Modal = ({ isVisible, onClose, image }) => {
   if (!isVisible) return null;
 
   const handleClose = (e) => {
@@ -14,12 +13,15 @@ const Modal = ({ isVisible, onClose }) => {
     <div
       className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm 
     flex justify-center items-center" id="wrapper" onClick={handleClose} >
-      <div className="w-[600px] flex flex-col">
-        <button className="text-white text-xl place-self-end" onClick={() => onClose()}>
-          ×
+      <div className="w-[800px] flex flex-col">
+        <button className=" text-4xl mb-3" onClick={() => onClose()}>
+          <span className="bg-white rounded-full px-2 pb-1">×</span>
         </button>
         <div className="bg-white p-2 rounded z-50">
-          <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service1.jpg" alt="" />
+          <Image width={800} height={800} className="max-w-full rounded-lg"
+            src={image}
+            alt="ベルテックの事業内容の画像"
+          />
         </div>
       </div>
     </div >

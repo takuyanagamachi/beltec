@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { LtoR, BtoU, RtoL, HtoH } from "@/app/motion";
 import Contact from "@/components/contact";

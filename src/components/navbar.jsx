@@ -6,7 +6,7 @@ import NavLink from "./navLink";
 import { motion } from "framer-motion";
 
 const links = [
-  // { url: "/", img: "/BeltecLogohen.png" },
+  { url: "/", img: "/BeltecLogohen.png" },
   { url: "/about", title: "企業情報" },
   { url: "/service", title: "事業内容" },
   { url: "/contact", title: "お問い合わせ" },
@@ -83,9 +83,9 @@ const Navbar = () => {
             <Link href="/" className="flex items-center">
               <Image src="/BeltecLogohen.png" width={150} height={150} className="h-12" alt="ベルテックのロゴ" />
             </Link>
-            <Link href="https://www.yondenko.co.jp/" target="blank" className="flex items-center mt-2 ml-4">
-              <Image src="/4denLogo.png" width={30} height={30} className="h-8" alt="四電工のロゴ" />
-            </Link>
+            <p className="flex items-end ml-3">
+              <Image src="/4denLogo.jpg" width={100} height={60} className="h-6" alt="四電工のロゴ" />
+            </p>
           </div>
 
           <div>
