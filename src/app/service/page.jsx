@@ -67,10 +67,15 @@ const PortfolioPage = () => {
               whileInView={BtoU().onscreen}
               viewport={{ once: false, amount: 0 }}
               className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <Image className="rounded-t-lg" width={400} height={400} src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+              <Image className="rounded-t-lg" width={400} height={400} src="/images/service/systemOfDenki.jpg" alt="電気設備の設計、施工、管理" />
               <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  電気設備の設計、施工、管理
+                </h5>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  福祉施設などの建設工事における電気工事の
+                  一般住宅、マンション、複合ビル、店舗、設計、積算、管理、施工を担います。
+                </p>
               </div>
             </motion.div>
 
@@ -79,10 +84,14 @@ const PortfolioPage = () => {
               whileInView={BtoU(0.5).onscreen}
               viewport={{ once: false, amount: 0 }}
               className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <Image className="rounded-t-lg" width={400} height={400} src="https://images.unsplash.com/photo-1583954964358-1bd7215b6f7a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+              <Image className="rounded-t-lg" width={400} height={400} src="/images/service/denkiTsusin.jpg" alt="電気通信工事業" />
               <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  電気通信工事業
+                </h5>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  テレビ、インターネットなどの情報通信設備の設置や、防犯カメラ、インターホンなどの設備機器の設置を行っています。
+                </p>
               </div>
             </motion.div>
             <motion.div
@@ -90,45 +99,17 @@ const PortfolioPage = () => {
               whileInView={BtoU(1).onscreen}
               viewport={{ once: false, amount: 0 }}
               className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <Image className="rounded-t-lg" width={400} height={400} src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWxlY3RyaWNhbCUyMHdvcmt8ZW58MHwwfDB8fHwy" alt="" />
+              <Image className="rounded-t-lg" width={400} height={400} src="/images/service/systemOfAir.jpg" alt="空調設備工事業" />
               <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  空調設備工事業
+                </h5>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  室内および室外機器の設置、ダクトや配管の設置、および電気配線工事を行っています。
+                </p>
               </div>
             </motion.div>
-            <motion.div
-              initial={BtoU().offscreen}
-              whileInView={BtoU().onscreen}
-              viewport={{ once: false, amount: 0 }}
-              className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <Image className="rounded-t-lg" width={400} height={400} src="https://images.unsplash.com/photo-1527356900876-cae61d8d8462?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZWxlY3RyaWNhbCUyMHdvcmt8ZW58MHwwfDB8fHwy" alt="" />
-              <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={BtoU().offscreen}
-              whileInView={BtoU(0.5).onscreen}
-              viewport={{ once: false, amount: 0 }}
-              className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <Image className="rounded-t-lg" width={400} height={400} src="https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZWxlY3RyaWNhbCUyMHdvcmt8ZW58MHwwfDB8fHwy" alt="" />
-              <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={BtoU().offscreen}
-              whileInView={BtoU(1).onscreen}
-              viewport={{ once: false, amount: 0 }}
-              className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <Image className="rounded-t-lg" width={400} height={400} src="https://images.unsplash.com/photo-1607631697491-61972eecf928?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D" alt="" />
-              <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-              </div>
-            </motion.div>
+
           </div>
         </div>
 

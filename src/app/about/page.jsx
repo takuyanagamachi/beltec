@@ -126,7 +126,7 @@ const InfoPage = () => {
               事業所
             </li>
             <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              本社 〒700-0845 岡山県岡山市南区浜野4丁目17番6号
+              本社 〒700-0845 岡山県岡山市南区浜野4丁目17番6号<br />
               TEL 086-264-8888/FAX 086-264-1988
             </li>
             <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
@@ -140,9 +140,7 @@ const InfoPage = () => {
               仕入先
             </li>
             <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              八州電気工業株式会社、シンセイ株式会社、
-              暁電業株式会社、双葉電機株式会社、
-              小林電工株式会社、三親電材株式会社、
+              八州電気工業株式会社  シンセイ株式会社  暁電業株式会社  双葉電機株式会社  小林電工株式会社  三親電材株式会社
             </li>
             <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
               協力会社
@@ -203,7 +201,8 @@ const InfoPage = () => {
                     1994年6月
                   </div>
                   <div className="text-gray-600 p-1 text-md lg:text-xl">
-                    株式会社ベルテック前身にあたるテクノサービス設立、家電事業開始
+                    株式会社ベルテック前身にあたるテクノサービス設立、家電事業開始<br />
+                    <span className="text-black font-bold">（現在：家電事業終了）</span>
                   </div>
                 </div>
                 <div className="w-1/6 grid justify-center">
@@ -304,7 +303,8 @@ const InfoPage = () => {
                   </div>
                   <div className="text-gray-600 p-1 text-md lg:text-xl">
                     給排水設備事業開始<br />
-                    太陽光事業開始
+                    太陽光事業開始<br />
+                    <span className="text-black font-bold ">（現在：給排水設備事業、<br />太陽光事業終了）</span>
                   </div>
                 </div>
               </div>
@@ -353,7 +353,8 @@ const InfoPage = () => {
                     2014年4月
                   </div>
                   <div className="text-gray-600 p-1 text-md lg:text-xl">
-                    四国営業所開設
+                    四国営業所開設<br />
+                    <span className="text-black font-bold ">（現在：閉鎖）</span>
                   </div>
                 </div>
                 <div className="w-1/6 grid justify-center">
@@ -381,6 +382,24 @@ const InfoPage = () => {
                     資本金35,000千円に増資
                   </div>
                 </div>
+              </div>
+
+              {/* LEFT*/}
+              <div className="flex justify-between h-28">
+                <div className="w-1/3">
+                  <div className="p-1 font-semibold text-lg lg:text-2xl">
+                    2021年12月
+                  </div>
+                  <div className="text-gray-600 p-1 text-md lg:text-xl">
+                    株式会社四電工グループとなる
+                  </div>
+                </div>
+                <div className="w-1/6 grid justify-center">
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/3"></div>
               </div>
 
             </motion.div>
