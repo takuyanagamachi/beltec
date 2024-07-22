@@ -17,7 +17,7 @@ const Recruit = () => {
           group-hover:to-yellow-200 focus:ring-4 focus:outline-none focus:ring-red-100"
           >
             <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
-              <Link href="mailto:soumu-beltec@beltec-e.co.jp">応募する</Link>
+              <Link href="mailto:soumu-beltec@beltec-e.co.jp?subject=電気工事士 / 電気施工管理技士応募の件">応募する</Link>
             </span>
           </button>
 
