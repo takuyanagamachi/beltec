@@ -8,10 +8,10 @@ const Recruit = () => {
   return (
     <div className="p-4 bg-gray-200 rounded-lg">
       <div className="py-2">
-        <div className="flex justify-between">
+        <div className="grid md:grid-cols-2 ">
           <span className="text-lg sm:text-xl md:text-2xl">電気工事士 / 電気施工管理技士</span>
-          <button className="relative inline-flex items-center justify-center 
-          p-0.5 mb-2 me-2 overflow-hidden hover:text-black text-slate-600 text-lg font-semibold
+          <button className="md:ml-auto w-fit mt-5 md:mt-1 relative inline-flex items-center
+          p-0.5 mb-2 me-2 overflow-hidden hover:text-black text-slate-600 text-md md:text-lg font-semibold
           rounded-lg group bg-gradient-to-br from-red-200 
           to-yellow-200 group-hover:from-red-200 
           group-hover:to-yellow-200 focus:ring-4 focus:outline-none focus:ring-red-100"
