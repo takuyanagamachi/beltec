@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { BtoU, HtoH, LtoR } from "../motion";
-import Link from "next/link";
 import { FiPhoneCall } from "react-icons/fi";
 import { useRef } from "react";
 import emailjs from '@emailjs/browser';

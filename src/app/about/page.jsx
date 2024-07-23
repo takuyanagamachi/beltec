@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { LtoR, BtoU, RtoL, HtoH } from "@/app/motion";
+import { LtoR, BtoU, HtoH } from "@/app/motion";
 import Contact from "@/components/contact";
 import Call_now from "@/components/call_now";
 
@@ -110,18 +110,6 @@ const InfoPage = () => {
             <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
               電気工事業 岡山県知事許可 特定 第25388号
             </li>
-            {/* <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
-              営 業 許 可
-            </li>
-            <li className="text-gray-700 w-full border-b border-yellow-200 p-1 pl-4 my-2 text-lg font-normal">
-              一般貨物自動車運送事業許可<br />
-              中国自貨第137号<br />
-              産業廃棄物収集運搬業<br />
-              岡山県第03300140828号<br />
-              香川県第03709140828号<br />
-              第一種フロン類充填回収業者<br />
-              岡山県 登録番号 第331110157号
-            </li> */}
             <li className="w-full border-b border-yellow-200 my-2 p-1 pl-4 text-2xl font-semibold text-gray-800">
               事業所
             </li>

@@ -1,10 +1,7 @@
 "use client"
-import Contact from "@/components/contact";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
-import { BtoU, HtoH, LtoR } from "../motion";
-import Call_now from "@/components/call_now";
+import { motion } from "framer-motion";
+import { BtoU, LtoR } from "../motion";
 import { GrUserManager } from "react-icons/gr";
 import { GrUserFemale } from "react-icons/gr";
 import Recruit from "@/components/recruit";
@@ -48,7 +45,11 @@ const RecruitPage = () => {
             <p className="text-yellow-500 tracking-wide text-xl">-働く人の声-</p>
           </motion.div>
 
-          <div className="flex flex-col p-5 bg-white shadow-2xl rounded-xl">
+          <motion.div
+            initial={LtoR().offscreen}
+            whileInView={LtoR().onscreen}
+            viewport={{ once: false, amount: 0 }}
+            className="flex flex-col p-5 bg-white shadow-2xl rounded-xl">
 
 
             <div className="flex flex-row justify-start mt-2 mb-2">
@@ -109,7 +110,7 @@ const RecruitPage = () => {
               </div>
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 
@@ -130,9 +131,14 @@ const RecruitPage = () => {
             <p className="text-center text-yellow-500 tracking-wide text-xl">-募集職種-</p>
           </motion.div>
 
-          <div className="w-full ">
+          <motion.div
+            initial={LtoR().offscreen}
+            whileInView={LtoR().onscreen}
+            viewport={{ once: false, amount: 0 }}
+            className="w-full"
+          >
             <Recruit />
-          </div>
+          </motion.div>
         </div>
 
 

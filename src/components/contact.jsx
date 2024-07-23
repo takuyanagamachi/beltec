@@ -5,9 +5,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
 import { LtoR, BtoU } from "@/app/motion";
 const Contact = () => {
-
   return (
-
     <section className="py-16 h-full container max-w-lg mx-auto">
       <motion.div
         initial={LtoR().offscreen}
