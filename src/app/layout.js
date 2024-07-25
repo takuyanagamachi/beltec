@@ -8,8 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "株式会社ベルテック 岡山市の電気工事",
-  description: "株式会社ベルテック 電気設備工事・空調設備工事はお任せ下さい。／岡山県岡山市.",
+  title: "（株）ベルテック｜電気工事の事ならお任せください",
+  description: "岡山市に拠点を置く株式会社ベルテックは、電気設備の設計、施工、管理、電気通信、空調設備等、幅広く提案させて頂きます。"
 };
 
 export default function RootLayout({ children }) {

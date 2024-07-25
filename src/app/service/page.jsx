@@ -3,23 +3,18 @@ import Contact from "@/components/contact";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { BtoU, HtoH, LtoR } from "../motion";
-import Modal from "@/components/modal";
-import { useState } from "react";
+// import Modal from "@/components/modal";
+// import { useState } from "react";
 import Call_now from "@/components/call_now";
 // images
-import Service1 from '@/images/service/service1.jpg';
-import Service2 from '@/images/service/service2.jpg';
-import Service3 from '@/images/service/service3.jpg';
+// import Service1 from '@/images/service/service1.jpg';
+// import Service2 from '@/images/service/service2.jpg';
+// import Service3 from '@/images/service/service3.jpg';
 
 const PortfolioPage = () => {
-  const [showModal1, setShowModal1] = useState(false);
-  const [showModal2, setShowModal2] = useState(false);
-  const [showModal3, setShowModal3] = useState(false);
-  const [showModal4, setShowModal4] = useState(false);
-  const [showModal5, setShowModal5] = useState(false);
-  const [showModal6, setShowModal6] = useState(false);
-  const [showModal7, setShowModal7] = useState(false);
-  const [showModal8, setShowModal8] = useState(false);
+  // const [showModal1, setShowModal1] = useState(false);
+  // const [showModal2, setShowModal2] = useState(false);
+  // const [showModal3, setShowModal3] = useState(false);
 
 
   return (
@@ -72,8 +67,8 @@ const PortfolioPage = () => {
                   電気設備の設計、施工、管理
                 </h5>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  福祉施設などの建設工事における電気工事の
-                  一般住宅、マンション、複合ビル、店舗、設計、積算、管理、施工を担います。
+                  福祉施設、一般住宅、マンション、複合ビル、店舗などの建設工事おける
+                  電気工事、設計、積算、管理、施工を担います。
                 </p>
               </div>
             </motion.div>
@@ -143,7 +138,19 @@ const PortfolioPage = () => {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto"
           >
 
-            <button
+            <div>
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service1.jpg" alt="" />
+            </div>
+
+            <div>
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service2.jpg" alt="" />
+            </div>
+
+            <div>
+              <Image width={500} height={500} className="max-w-full rounded-lg" src="/images/service/service3.jpg" alt="" />
+            </div>
+
+            {/* <button
               className="cursor text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               onClick={() => setShowModal1(true)}
             >
@@ -151,10 +158,10 @@ const PortfolioPage = () => {
             </button>
             <Modal isVisible={showModal1} image={Service1}
               onClose={() => setShowModal1(false)}
-            />
+            /> */}
 
 
-            <button
+            {/* <button
               className="cursor text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               onClick={() => setShowModal2(true)}
             >
@@ -162,17 +169,7 @@ const PortfolioPage = () => {
             </button>
             <Modal isVisible={showModal2} image={Service2}
               onClose={() => setShowModal2(false)}
-            />
-
-            <button
-              className="cursor text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              onClick={() => setShowModal3(true)}
-            >
-              <Image width={500} height={500} className="max-w-full rounded-lg" src={Service3} alt="" />
-            </button>
-            <Modal isVisible={showModal3} image={Service3}
-              onClose={() => setShowModal3(false)}
-            />
+            /> */}
 
 
             <div>
