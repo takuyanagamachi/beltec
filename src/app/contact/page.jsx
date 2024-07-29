@@ -11,14 +11,14 @@ import Call_now from "@/components/call_now";
 const ContactPage = () => {
 
   const text = "社員一同お待ちしています"
-
+  const toast_message = `お問い合わせありがとうございます！\n返信まで今しばらくお待ちください。`
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
     const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
-    const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+    const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID_BELTEC;
+    const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID_BELTEC;
 
     emailjs.sendForm(serviceID,
       templateID,
@@ -26,7 +26,7 @@ const ContactPage = () => {
       publicKey)
       .then((result) => {
         console.log(result.text);
-        toast.success("お問い合わせありがとうございます！返信まで少々お待ちください。");
+        toast.success(toast_message);
       }, (error) => {
         console.log(error.text);
       });

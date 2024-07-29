@@ -38,3 +38,8 @@
   background-position: center;
   background-size: cover;
 }
+
+/* Tostify */
+.Toastify__toast-body {
+  white-space: pre-line;
+}
