@@ -16,7 +16,7 @@ const ContactPage = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY_BELTEC;
     const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID_BELTEC;
     const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID_BELTEC;
 
