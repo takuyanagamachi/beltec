@@ -16,9 +16,9 @@ const ContactPage = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY_BELTEC;
-    const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID_BELTEC;
-    const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID_BELTEC;
+    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+    const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID_B;
+    const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID_B;
 
     emailjs.sendForm(serviceID,
       templateID,
@@ -164,7 +164,7 @@ const ContactPage = () => {
               className="block py-2.5 px-0 w-full text-lg text-gray-900 
             bg-transparent border-0 border-b-2 border-gray-300 appearance-none 
              focus:outline-none focus:ring-0 focus:border-yellow-300 peer"
-              placeholder=" " required />
+              placeholder="" required />
             <label htmlFor="form_email"
               className="peer-focus:font-medium absolute text-lg text-gray-500 
             duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] 
@@ -205,13 +205,13 @@ const ContactPage = () => {
               <label for="floating_company" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Company (Ex. Google)</label>
             </div>
           </div> */}
-          <button type="submit"
-            className="text-white text-lg  bg-yellow-400 hover:bg-yellow-500 
+
+          <input type="submit" className="text-white text-lg  bg-yellow-400 hover:bg-yellow-500 
             focus:ring-4 focus:outline-none focus:ring-yellow-300 font-bold 
-            rounded-lg w-full sm:w-auto px-5 py-2.5 text-center
-            ">
-            送信
-          </button>
+            rounded-lg w-full sm:w-auto px-5 py-2.5 text-center"
+            value="送信"
+          />
+
           <div className="flex items-center justify-center text-lg sm:text-4xl my-[80px]">
             <div>
               {text.split("").map((letter, index) => (
