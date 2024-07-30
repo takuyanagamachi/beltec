@@ -17,8 +17,8 @@ const ContactPage = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
-    const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID_B;
-    const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID_B;
+    const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID;
+    const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
 
     emailjs.sendForm(serviceID,
       templateID,
