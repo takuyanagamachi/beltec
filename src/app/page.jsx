@@ -3,11 +3,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FiPhoneCall } from "react-icons/fi";
-import { LtoR, BtoU, HtoH } from "@/app/motion";
 import Contact from "@/components/contact";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Call_now from "@/components/call_now";
+import { LtoR, BtoU, HtoH } from "@/app/motion";
 
 
 

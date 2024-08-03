@@ -4,7 +4,7 @@ import Image from "next/image";
 import { BtoU, HtoH, LtoR } from "../motion";
 import { FiPhoneCall } from "react-icons/fi";
 import { useRef } from "react";
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import { toast } from "react-toastify";
 import Call_now from "@/components/call_now";
 
@@ -12,26 +12,55 @@ const ContactPage = () => {
 
   const text = "社員一同お待ちしています"
   const toast_message = `お問い合わせありがとうございます！\n返信まで今しばらくお待ちください。`
-  const form = useRef();
+  // const form = useRef();
 
-  const sendEmail = (e) => {
+  const companyNameRef = useRef(null);
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
-    const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
-
-    emailjs.sendForm(serviceID,
-      templateID,
-      form.current,
-      publicKey)
-      .then((result) => {
-        console.log(result.text);
-        toast.success(toast_message);
-      }, (error) => {
-        console.log(error.text);
-      });
+    console.log("メール送信");
+    toast.success(toast_message);
+    let data = {
+      companyName: companyNameRef.current?.value,
+      name: nameRef.current?.value,
+      email: emailRef.current?.value,
+      message: messageRef.current?.value,
+    };
     e.target.reset();
+
+    await fetch("/api/email", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain",
+        "Content-Type": "application/json",
+      },
+      data: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) console.log("メース送信成功");
+    });
   };
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+  //   const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID;
+  //   const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+
+  //   emailjs.sendForm(serviceID,
+  //     templateID,
+  //     form.current,
+  //     publicKey)
+  //     .then((result) => {
+  //       console.log(result.text);
+  //       toast.success(toast_message);
+  //     }, (error) => {
+  //       console.log(error.text);
+  //     });
+  //   e.target.reset();
+  // };
 
   return (
     <div className="mt-[50px] bgImageWhite">
@@ -124,11 +153,12 @@ const ContactPage = () => {
           initial={BtoU().offscreen}
           whileInView={BtoU().onscreen}
           viewport={{ once: false, amount: 0 }}
-          ref={form} onSubmit={sendEmail}
+          // ref={form} onSubmit={sendEmail}
+          onSubmit={(e) => handleSubmit(e)}
           className="w-full mx-auto mt-[120px]  p-[50px] rounded">
 
           <div className="relative z-0 w-full mb-5 group">
-            <input type="text" name="company" id="form_companyName"
+            <input ref={companyNameRef} type="text" name="company" id="form_companyName"
               className="block py-2.5 px-0 w-full text-lg text-gray-900 
             bg-transparent border-0 border-b-2 border-gray-300 appearance-none 
             focus:outline-none focus:ring-0 focus:border-yellow-300 peer"
@@ -144,7 +174,7 @@ const ContactPage = () => {
           </div>
 
           <div className="relative z-0 w-full mb-5 group">
-            <input type="text" name="name" id="form_name"
+            <input ref={nameRef} type="text" name="name" id="form_name"
               className="block py-2.5 px-0 w-full text-lg text-gray-900 
             bg-transparent border-0 border-b-2 border-gray-300 appearance-none 
             focus:outline-none focus:ring-0 focus:border-yellow-300 peer"
@@ -160,7 +190,7 @@ const ContactPage = () => {
           </div>
 
           <div className="relative z-0 w-full mb-5 group">
-            <input type="email" name="email" id="form_email"
+            <input ref={emailRef} type="email" name="email" id="form_email"
               className="block py-2.5 px-0 w-full text-lg text-gray-900 
             bg-transparent border-0 border-b-2 border-gray-300 appearance-none 
              focus:outline-none focus:ring-0 focus:border-yellow-300 peer"
@@ -178,7 +208,7 @@ const ContactPage = () => {
 
 
           <div className="relative z-0 w-full mb-5 group">
-            <textarea rows={8} name="message" id="form_message"
+            <textarea ref={messageRef} rows={8} name="message" id="form_message"
               className="block py-2.5 px-0 w-full text-lg text-gray-900 
             bg-transparent border-0 border-b-2 border-gray-300 appearance-none 
              focus:outline-none focus:ring-0 focus:border-yellow-300 peer"
